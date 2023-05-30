@@ -1,15 +1,11 @@
 import fs from 'node:fs';
 
 const files = fs.readdirSync('./plugins/cunyx-plugin/apps').filter(file => file.endsWith('.js'));
-
 let ret = [];
-
 files.forEach((file) => {
       ret.push(import(`./apps/${file}`))
 });
-
 ret = await Promise.allSettled(ret)
-
 let apps = {};
 for (let i in files) {
       let name = files[i].replace('.js', '');
