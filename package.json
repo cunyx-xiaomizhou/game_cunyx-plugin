@@ -1,0 +1,10 @@
+{
+    "name": "cunyx-plugin",
+    "version": "Alpha 0.6.1",
+    "author": "最好喝的小米粥",
+    "type": "module",
+    "dependencies": {
+        "node-fetch": "^3.3.1",
+        "yaml": "^2.2.1"
+    }
+}
