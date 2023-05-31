@@ -17,7 +17,7 @@ git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 
 3.  更改名称，生效控制面板
 ```
-cd cunyx-plugin && mv def_config config
+cd ./plugins/cunyx-plugin && mv def_config config
 ```
 #### 使用指令
 |命令|功能|备注|是否需要token|
