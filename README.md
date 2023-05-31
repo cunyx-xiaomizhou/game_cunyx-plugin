@@ -6,12 +6,12 @@
 #### 安装教程
 
 1.  进入云崽根目录
-```
+```linux
 cd Yunzai-Bot
 ```
 
 2.  拉取项目
-```
+```linux
 git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 #### 使用指令
