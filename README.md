@@ -50,3 +50,7 @@ cd ~ && cd Yunzai-Bot && node app
 6.   token自助续费页面正在编写，若需续费请联系小米粥
 7.   首次续费需要免费获取使用量超过50%以上，否则不予续费
 8.   token填写目录`./plugins/cunyx-plugin/config/cunyx_api.yaml`
+
+####  特别鸣谢
+|---------|------------------|
+|昵称|贡献内容|
