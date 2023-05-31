@@ -6,18 +6,23 @@
 #### 安装教程
 
 1.  进入云崽根目录
-```linux
+```
 cd Yunzai-Bot
 ```
 
 2.  拉取项目
-```linux
+```
 git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 
 3.  更改名称，生效控制面板
 ```
 cd ./plugins/cunyx-plugin && mv def_config config
+```
+
+4.  重启机器人
+```
+cd ~ && cd Yunzai-Bot && node app
 ```
 #### 使用指令
 |命令|功能|备注|是否需要token|
