@@ -12,7 +12,7 @@ cd Yunzai-Bot
 
 2.  拉取项目
 ```
-git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugin/cunyx-plugin/
+git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 #### 使用指令
 |命令|功能|备注|是否需要token|
