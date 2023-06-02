@@ -7,7 +7,7 @@
 
 寸幼萱插件是一个Yunzai-Bot的扩展插件，具体功能请见下方`使用指令`板块！
 
-</div>
+<div>
 <div align="center">
 
 [![](https://img.shields.io/badge/cunyx-plugin-LightPink)](https://gitee.com/cunyx/cunyx-plugin)
@@ -19,6 +19,7 @@
 
 </div>
 </div>
+
 #### 安装教程
 
 1.  进入云崽根目录
