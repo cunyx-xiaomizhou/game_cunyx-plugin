@@ -18,7 +18,8 @@
 [![访问量](https://profile-counter.glitch.me/cunyx-plugin/count.svg)](https://gitee.com/cunyx/cunyx-plugin.git)
 
 </div>
-</div>#### 安装教程
+</div>
+#### 安装教程
 
 1.  进入云崽根目录
 ```
