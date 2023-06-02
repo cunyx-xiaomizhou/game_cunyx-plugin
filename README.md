@@ -1,9 +1,24 @@
-# 寸幼萱插件cunyx-plugin
+</div>
+ <h1>寸幼萱插件cunyx-plugin</h1>
+</div>
 
 #### 介绍
-云崽机器人寸幼萱插件(cunyx-plugin)的Gitee仓库地址
+云崽机器人的寸幼萱插件(cunyx-plugin)
 
-#### 安装教程
+寸幼萱插件是一个Yunzai-Bot的扩展插件，具体功能请见下方`使用指令`板块！
+
+</div>
+<div align="center">
+
+[![](https://img.shields.io/badge/cunyx-plugin-LightPink)](https://gitee.com/cunyx/cunyx-plugin)
+[![](https://img.shields.io/badge/Author-寸幼萱-DeepSkyBlue)](https://gitee.com/cunyx)
+<a href='https://gitee.com/cunyx/cunyx-plugin/stargazers'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
+<a href='https://gitee.com/cunyx/cunyx-plugin/members'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/fork.svg?theme=dark' alt='fork'></img></a>
+
+[![访问量](https://profile-counter.glitch.me/cunyx-plugin/count.svg)](https://gitee.com/cunyx/cunyx-plugin.git)
+
+</div>
+</div>#### 安装教程
 
 1.  进入云崽根目录
 ```
