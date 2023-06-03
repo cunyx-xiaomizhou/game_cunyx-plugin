@@ -32,6 +32,7 @@ export class cunyx_update extends plugin {
   }
   async update (e) {
     if (!e.isMaster) {
+      e.reply('你不是我的主人，我不能更新');
       return true;
     }
     let isForce = e.msg.includes('强制');
