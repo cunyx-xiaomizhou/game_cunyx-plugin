@@ -33,6 +33,11 @@ git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 
 3.  更改名称，生效控制面板
+Windows系统执行：
+```
+cd ./plugins/cunyx-plugin && ren def_config config
+```
+Linux系统执行：
 ```
 cd ./plugins/cunyx-plugin && mv def_config config
 ```
