@@ -37,7 +37,7 @@ git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 cd ./plugins/cunyx-plugin && mv def_config config
 ```
-如果报错，请进入`/Yunzai-Bot/plugins/cunyx-plugin/`文件夹，把名为`def_comfig`更名为`config`后进行下一步操作
+如果报错，请进入`/Yunzai-Bot/plugins/cunyx-plugin/`文件夹，把名为`def_config`的文件夹更名为`config`后进行下一步操作
 
 4.  重启机器人
 ```
