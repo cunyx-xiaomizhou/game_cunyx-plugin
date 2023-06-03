@@ -14,7 +14,8 @@ export class cunyx_api extends plugin {
       priority:999999999,/*优先级*/
       rule:[
         {reg:"^#?(.*)?(寸幼萱|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(t|T|a|A)(.*)?",
-          fnc:"api",}
+          fnc:"api",},
+        {reg:"^#?寸幼萱查看当前绑定",fnc:"ck"}
       ]
     });
   }
@@ -32,5 +33,8 @@ export class cunyx_api extends plugin {
     } else {
       e.reply('求求你做点人事吧，你也配命令我？');
     }
+  }
+  async ck (e) {
+    e.reply('当前绑定QQ为：'+data.qq);
   }
 }
