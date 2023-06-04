@@ -29,7 +29,7 @@ export class make_friends extends plugin {
     let json = await fetch(`http://plugin.cunyx.cn/cunyx-plugin/apps/make_friend.php?qq=${data.qq}&token=${data.api}&type=2`);
     json = await json.json();
     var text = json;
-    if (text.msg[0]=='^\d') {
+    if (/^\d+$/.test(text.msg)) {
       e.reply('获取到的QQ是：'+text.msg+'哦~\n快去加一下试试看吧！');
     } else {
       e.reply(text.msg);
