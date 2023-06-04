@@ -5,7 +5,6 @@
     "type": "module",
     "dependencies": {
         "node-fetch": "^3.3.1",
-        "yaml": "^2.2.1",
-        "puppeterr": "^19.11.1"
+        "yaml": "^2.2.1"
     }
 }
