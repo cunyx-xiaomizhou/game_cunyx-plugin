@@ -65,11 +65,11 @@ cd ~ && cd Yunzai-Bot && node app
 (只列举`pnpm add instead -w`中不包含的依赖)
 如果想要安装特定版本，请在安装指令的`-w`前填写`@`+`版本号`，例如：
 
-`pnpm add puppeteer@13.7.0 -w`
+`pnpm add puppeteer@19.11.1 -w`
 
 |依赖名称|推荐版本|安装指令|
 |----------|----------|-------------------|
-|puppeteer|`13.7.0`|`pnpm add puppeteer -w`|
+|puppeteer|`19.11.1`|`pnpm add puppeteer -w`|
 
 #### token相关
 1.   每个人都有2000额度的免费token
