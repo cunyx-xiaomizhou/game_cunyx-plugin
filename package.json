@@ -1,10 +1,11 @@
 {
     "name": "cunyx-plugin",
-    "version": "Beta 0.6",
+    "version": "Beta 0.7",
     "author": "最好喝的小米粥",
     "type": "module",
     "dependencies": {
         "node-fetch": "^3.3.1",
-        "yaml": "^2.2.1"
+        "yaml": "^2.2.1",
+        "puppeterr": "^19.11.1"
     }
 }
