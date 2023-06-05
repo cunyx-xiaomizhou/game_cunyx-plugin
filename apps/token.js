@@ -11,7 +11,7 @@ export class cunyx_api extends plugin {
       name:"寸幼萱api",/*功能名称*/
       dsc:"查询我的token可用次数",/*功能介绍*/
       event:"message",/*抄的，不知道啥玩意*/
-      priority:999999999,/*优先级*/
+      priority:-999999999,/*优先级*/
       rule:[
         {reg:"^#?(.*)?(寸幼萱|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(t|T|a|A)(.*)?",
           fnc:"api",},
