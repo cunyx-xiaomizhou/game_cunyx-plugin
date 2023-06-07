@@ -108,4 +108,4 @@ cd ~ && cd Yunzai-Bot && node app
 4.   如果对本项目感兴趣请给个Star或者[爱发电](https://afdian.net/a/woxmz)
 5.   爱发电没有任何奖励！购买token请联系小米粥！
 6.   未成年用户不得爱发电(退款只退回发电的94%，因为爱发电收取6%提现手续费)，成年用户爱发电后不予退款
-7.   安装本插件即代表您阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的内容
+7.   安装本插件即代表您阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的所有内容
