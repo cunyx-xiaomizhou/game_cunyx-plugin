@@ -84,6 +84,7 @@ cd ~ && cd Yunzai-Bot && node app
 7.   token续费请在爱发电或联系小米粥(QQ号：`2996849867`)支付，其他支付方式均是伪冒
 8.   发电支付前请确保QQ号是否填写对错，若错不赔偿任何损失
 8.   token填写目录`./plugins/cunyx-plugin/config/cunyx_api.yaml`
+9.   领取2000token的人若在2023-06-09日之前未使用token的将从2000次更改为200次！
 
 ####  特别鸣谢
 |昵称|贡献内容|联系方式|
