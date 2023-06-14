@@ -43,11 +43,11 @@ export class ikun_card extends plugin {
         height: 800
       });
       await page.screenshot({
-        path: process.cwd()+`/plugins/cunyx-plugin/resources/img/ikun/${qq}.png`,
+        path: process.cwd()+`/plugins/cunyx-plugin/data/ikun/${qq}.png`,
         fullPage: true
       });
       await browser.close();
-      await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/resources/img/ikun/${qq}.png`)]);
+      await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/data/ikun/${qq}.png`)]);
     } else {
       e.reply(msg);
     }
