@@ -15,6 +15,8 @@
 <a href='https://gitee.com/cunyx/cunyx-plugin/stargazers'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 <a href='https://gitee.com/cunyx/cunyx-plugin/members'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/fork.svg?theme=dark' alt='fork'></img></a>
 
+<center>本文访问量</center>
+
 [![访问量](https://profile-counter.glitch.me/cunyx-plugin/count.svg)](https://gitee.com/cunyx/cunyx-plugin.git)
 
 </div>
