@@ -34,16 +34,10 @@ cd Yunzai-Bot
 git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
 ```
 
-3.  更改名称，生效控制面板
+3.  重启机器人，生效控制面板
 
 ```
-cd ./plugins/cunyx-plugin && mv def_config config
-```
-如果报错，请进入`/Yunzai-Bot/plugins/cunyx-plugin/`文件夹，把名为`def_config`的文件夹更名为`config`后进行下一步操作
-
-4.  重启机器人
-```
-cd ~ && cd Yunzai-Bot && node app
+node app
 ```
 #### 使用指令
 |命令|功能|备注|是否需要token(划线代表无token可用，有token使用更佳)|
