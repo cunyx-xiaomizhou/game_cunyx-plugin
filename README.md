@@ -5,7 +5,7 @@
 #### 介绍
 云崽机器人的寸幼萱插件(cunyx-plugin)
 
-寸幼萱插件是一个Yunzai-Bot的扩展插件，具体功能请见下方`使用指令`板块！
+寸幼萱插件是一个Yunzai-Bot的扩展插件，具体功能请见下方`目前功能`板块！
 
 <div>
 <div align="center">
