@@ -9,3 +9,5 @@
 |`#导管子`|增长牛牛长度|长度可在`cunyx-plugin/config/impact.yaml`中自定义|
 |`#日群友`|消耗牛牛长度注射群友|长度和注射量可在`cunyx-plugin/config/impact.yaml`中自定义|
 |`#查询牛牛`|查询自己或他人牛牛长度及注射量||
+
+[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)
