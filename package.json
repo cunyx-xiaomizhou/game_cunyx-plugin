@@ -1,6 +1,6 @@
 {
     "name": "cunyx-plugin",
-    "version": "Beta 0.8.5",
+    "version": "Beta 0.9.0",
     "author": "最好喝的小米粥",
     "type": "module",
     "dependencies": {
