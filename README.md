@@ -41,7 +41,7 @@ pnpm restart
 ---
 #### 目前功能
 
-- [寸幼萱插件帮助](/HELP/IMPACT.md)
+- [寸幼萱插件帮助](/HELP/INDEX.md)
 - [寸幼萱淫趴帮助](/HELP/IMPACT.md)
 
 ---
