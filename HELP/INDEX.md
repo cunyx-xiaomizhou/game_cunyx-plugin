@@ -21,3 +21,4 @@
 |`#随机寸幼萱`|获取cunyx表情包| ✘ |
 |[银趴功能](/HELP/IMPACT.md)|查看寸幼萱银趴帮助| ✘ |
 ---
+[点此返回README.md](/README.md)
