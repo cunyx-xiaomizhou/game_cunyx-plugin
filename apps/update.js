@@ -13,7 +13,7 @@ export class cunyx_update extends plugin {
       name:"寸幼萱插件更新",
       dsc:"检查和更新寸幼萱插件",
       event:"message",
-      priority:1,/*优先级*/
+      priority:-999999999999999999999999999,/*优先级*/
       rule:[
         {reg:"^#?(c|C|寸)(.*)?检查(.*)?",fnc:"seek",},
         {reg:"^#?(c|C|寸)(.*)?更新(.*)?",fnc:"update",}
