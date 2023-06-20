@@ -228,9 +228,9 @@ export class cunyx_impact extends plugin {
             fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
               if (err) throw err;
                 if (qq == e.user_id) {
-                  e.reply(`导管成功了，你的牛牛很满意~\n牛牛努力生长了${new_long}cm\n你的牛牛一共有${write_long}cm了`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`));
+                  e.reply(`导管成功了，你的牛牛很满意~\n牛牛努力生长了${new_long}cm\n你的牛牛一共有${write_long}cm了`+segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`));
                 } else {
-                  e.reply(`导管成功了，ta的牛牛很满意~\n牛牛努力生长了${new_long}cm\nta的牛牛现在一共有${write_long}cm了`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
+                  e.reply(`导管成功了，ta的牛牛很满意~\n牛牛努力生长了${new_long}cm\nta的牛牛现在一共有${write_long}cm了`+segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
                 }
             });
           }
@@ -296,7 +296,7 @@ export class cunyx_impact extends plugin {
             yp_cond.data[e.user_id].inject = yp_cond.data[e.user_id].inject + zhushe;
             fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
               if (err) throw err;
-              e.reply(`你献祭了${die_niuzi}cm牛子，给Ta注射了${zhushe}ml的脱氧核糖核酸~`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
+              e.reply(`你献祭了${die_niuzi}cm牛子，给Ta注射了${zhushe}ml的脱氧核糖核酸~`+segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
             });
           });
         }
