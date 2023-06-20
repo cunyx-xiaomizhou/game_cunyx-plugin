@@ -1,4 +1,5 @@
 import plugin from './../../../lib/plugins/plugin.js';
+import { segmengt } from 'oicq';
 import YAML from 'yaml';
 import fs from 'fs';
 
@@ -227,9 +228,9 @@ export class cunyx_impact extends plugin {
             fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
               if (err) throw err;
                 if (qq == e.user_id) {
-                  e.reply(`导管成功了，你的牛牛很满意~\n牛牛努力生长了${new_long}cm\n你的牛牛一共有${write_long}cm了`);
+                  e.reply(`导管成功了，你的牛牛很满意~\n牛牛努力生长了${new_long}cm\n你的牛牛一共有${write_long}cm了`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`));
                 } else {
-                  e.reply(`导管成功了，ta的牛牛很满意~\n牛牛努力生长了${new_long}cm\nta的牛牛现在一共有${write_long}cm了`);
+                  e.reply(`导管成功了，ta的牛牛很满意~\n牛牛努力生长了${new_long}cm\nta的牛牛现在一共有${write_long}cm了`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
                 }
             });
           }
