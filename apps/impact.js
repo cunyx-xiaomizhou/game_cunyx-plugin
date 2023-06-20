@@ -296,7 +296,7 @@ export class cunyx_impact extends plugin {
             yp_cond.data[e.user_id].inject = yp_cond.data[e.user_id].inject + zhushe;
             fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
               if (err) throw err;
-              e.reply(`你献祭了${die_niuzi}cm牛子，给他注射了${zhushe}ml的脱氧核糖核酸~`);
+              e.reply(`你献祭了${die_niuzi}cm牛子，给Ta注射了${zhushe}ml的脱氧核糖核酸~`+segmengt.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`));
             });
           });
         }
