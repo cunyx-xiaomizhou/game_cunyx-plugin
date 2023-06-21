@@ -99,4 +99,4 @@ pnpm restart
 4.   如果对本项目感兴趣请给个Star或者[爱发电](https://afdian.net/a/woxmz)
 5.   在发电前请确认自己发电的项目，是有偿发电还是无偿发电或者商品名称，若发电时选择错误我方不赔偿损失
 6.   安装本插件即代表您阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的所有内容
-7.   [寸幼萱官群](https://qm.qq.com/cgi-bin/qm/qr?k=pNAKNGFJclE0zqHq68BP15_07GY6TzVM&authKey=ZIyd0wOdAQ+Z1ipwiQy82CQ1oDsNDaig/N5HCkIZ+zBAxNwkbuqVpTuMVYRZ+HLs&noverify=0&personal_qrcode_source=1001)；[寸幼萱官频](https://pd.qq.com/s/b6cnyjxfc)
+7.   点击加入[寸幼萱官群](https://qm.qq.com/cgi-bin/qm/qr?k=pNAKNGFJclE0zqHq68BP15_07GY6TzVM&authKey=ZIyd0wOdAQ+Z1ipwiQy82CQ1oDsNDaig/N5HCkIZ+zBAxNwkbuqVpTuMVYRZ+HLs&noverify=0&personal_qrcode_source=1001)、[寸幼萱官频](https://pd.qq.com/s/b6cnyjxfc)
