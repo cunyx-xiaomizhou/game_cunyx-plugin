@@ -3,7 +3,7 @@
 </div>
 
 ### 官方QQ群组:[786034611](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RQmaaqjjBiZTN_w-XTYEXUaERnEwbOQ7&authKey=D1MpUlvFgxeR40I1JWm0Mb06INQOrqgyhZQdPSYy%2F465B%2BATVD2Z0O%2FioXJ%2BNfSu&noverify=0&group_code=786034611)
-> 仅此一群   其他均为假冒群聊    
+> 寸幼萱群聊有多个，判别方法：
 > 请认准群主小米粥(2996849867)
 ---
 #### 介绍
