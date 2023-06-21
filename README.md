@@ -2,7 +2,6 @@
  <h1>寸幼萱插件cunyx-plugin</h1>
 </div>
 
----
 ### 官方QQ群组:[786034611](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=RQmaaqjjBiZTN_w-XTYEXUaERnEwbOQ7&authKey=D1MpUlvFgxeR40I1JWm0Mb06INQOrqgyhZQdPSYy%2F465B%2BATVD2Z0O%2FioXJ%2BNfSu&noverify=0&group_code=786034611)
 > 仅此一群   其他均为假冒群聊    
 > 请认准群主小米粥(2996849867)
@@ -71,7 +70,7 @@ pnpm restart
 3.   云崽插件plugin作者视情况获得500~2000份免费token
 4.   以上三条福利不可重复使用，每人仅能领取符合条件的其中一份
 5.   token领取请进群`786034611`私信小米粥(QQ号：`2996849867`)(一般晚上回复)
-7.   token续费请在爱发电或联系小米粥(QQ号：`2996849867`)支付，其他支付方式均是伪冒
+7.   token续费请在[爱发电](https://afdian.net/a/woxmz)或联系小米粥(QQ号：`2996849867`)支付，其他支付方式均是伪冒
 8.   发电支付前请确保QQ号是否填写对错，若错不赔偿任何损失
 8.   token填写目录`./plugins/cunyx-plugin/config/cunyx_api.yaml`
 9.   领取2000token的人若在2023-06-09日之前未使用token的将从2000次更改为200次！
@@ -100,8 +99,8 @@ pnpm restart
 #### 其他说明
 1.   本插件暂时没有帮助，指令列表可以在本页面查看
 2.   因为被某人威胁了，所以在插件里藏了一点绝对权限，一般开个玩笑啊之类的闹着玩我是不会动用这个权限的，要是动手了(包括但不限于DDoS等)，就别怪我不客气了。别看我是被吓大的，但我还是有脾气的！
-3.   赞助请[爱发电](https://afdian.net/a/woxmz)中发电最下面的自选金额进行赞助
+3.   赞助请在[爱发电](https://afdian.net/a/woxmz)中发电最下面的自选金额进行赞助
 4.   如果对本项目感兴趣请给个Star或者[爱发电](https://afdian.net/a/woxmz)
 5.   在发电前请确认自己发电的项目，是有偿发电还是无偿发电或者商品名称，若发电时选择错误我方不赔偿损失
-6.   安装本插件即代表您阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的所有内容
+6.   安装本插件则代表您已阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的所有内容
 7.   点击加入[寸幼萱官群](https://qm.qq.com/cgi-bin/qm/qr?k=pNAKNGFJclE0zqHq68BP15_07GY6TzVM&authKey=ZIyd0wOdAQ+Z1ipwiQy82CQ1oDsNDaig/N5HCkIZ+zBAxNwkbuqVpTuMVYRZ+HLs&noverify=0&personal_qrcode_source=1001)、[寸幼萱官频](https://pd.qq.com/s/b6cnyjxfc)
