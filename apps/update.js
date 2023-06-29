@@ -15,8 +15,8 @@ export class cunyx_update extends plugin {
       event:"message",
       priority:-9999999,/*优先级*/
       rule:[
-        {reg:"^#?(c|C|寸)(.*)?检查(.*)?",fnc:"seek",},
-        {reg:"^#?(c|C|寸)(.*)?更新(.*)?",fnc:"update",}
+        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(.*)?检查(.*)?",fnc:"seek",},
+        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(.*)?更新(.*)?",fnc:"update",}
       ]
     });
   }
