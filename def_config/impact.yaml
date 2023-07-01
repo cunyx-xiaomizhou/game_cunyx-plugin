@@ -19,3 +19,11 @@ riqunyou_height: 2
 #默认值2、6
 riqunyou_inject_low: 2
 riqunyou_inject_height: 6
+#下面是决斗功能的冷却时间(单位秒)
+cd_juedou: 150
+#下面分别填写决斗成功后牛牛增加长度的最小和最大值
+#默认值1、2
+juedou_low: 1
+juedou_height: 2
+#下面填写决斗失败者失去成功者失去牛牛的倍率(默认2)
+juedou_mult: 2
