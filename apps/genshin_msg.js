@@ -19,7 +19,7 @@ export class ysxx extends plugin {
       event:"message",/*抄的，不知道啥玩意*/
       priority:2,/*优先级*/
       rule:[
-        {reg:"^#?原神信息",
+        {reg:"^#?(原神)?信息",
           fnc:"msg",}
       ]
     });
