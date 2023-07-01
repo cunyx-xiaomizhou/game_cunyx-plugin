@@ -50,7 +50,7 @@ export class cunyx_update extends plugin {
         return true;
       }
       let bot_package = JSON.parse(fs.readFileSync('./package.json','utf-8'));
-      let bot_name = bot_package.log.replace(/pm2 logs --lines 400|#/g, '').trim();
+      let bot_name = bot_package.scripts.log.replace(/pm2 logs --lines 400|#/g, '').trim();
       e.reply('寸幼萱插件更新成功，请手动重启'+bot_name+'以应用更新...');
         return true;
       });
