@@ -14,7 +14,8 @@ export class cunyx_plugin_other extends plugin {
       event:"message",
       priority:-9999999,/*优先级*/
       rule:[
-        {reg:"^#?(寸幼萱|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(用户)?协议",fnc:"user_protocol",}
+        {reg:"^#?((寸|村)((幼|优)(萱|选)?)|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(用户)?协议",fnc:"user_protocol",},
+        {reg:"^#(爱|a|A)?(发|充|冲|f|F)(电|点|d|D)((i|I)(a|A)(n|N))?((寸|村|c|C)(u|U)?(n|N)?(幼|优|y|Y)(萱|选|x|X)|(小|修|秀|x|X)(米|咪|密|蜜|眯|m|M)(粥|周|洲|州|咒|z|Z))",fnc:"afdian"}
       ]
     });
   }
@@ -28,5 +29,8 @@ export class cunyx_plugin_other extends plugin {
       });
     await browser.close();
     e.reply(segment.image(process.cwd()+'/plugins/cunyx-plugin/data/user_protocol.png'));
+  }
+  async afdian (e) {
+    e.reply('大佬，饿饿，饭饭'+segment.image('https://plugin.cunyx.cn/afdian.png'));
   }
 }
