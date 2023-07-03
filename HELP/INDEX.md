@@ -24,6 +24,6 @@
 |`#随机小米粥`|获取小米粥表情包| ✘ |
 |`#随机寸幼萱`|获取cunyx表情包| ✘ |
 |`#寸幼萱用户协议`|查看寸幼萱用户协议|✘|
-|[#寸幼萱淫趴帮助](/HELP/IMPACT.md)|查看寸幼萱银趴帮助| ✘ |
+|[#寸幼萱淫趴帮助](/HELP/IMPACT.md)|查看寸幼萱淫趴帮助| ✘ |
 ---
-[点此返回README.md(或发送`#寸幼萱插件使用说明`)](https://gitee.com/cunyx/cunyx-plugin)
+[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)(或发送`#寸幼萱淫趴帮助`)
