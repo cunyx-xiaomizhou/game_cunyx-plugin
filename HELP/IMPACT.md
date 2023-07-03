@@ -11,5 +11,6 @@
 |`#决斗`|牺牲别人，成全自己|所有参数都可以在`cunyx-plugin/config/impact.yaml`中自定义|
 |`#重置淫趴配置面板`|将淫趴配置面板恢复为本地默认面板|机器人没有提示使用这个指令时最好不要使用，这会使你的淫趴控制面板变成默认面板|
 |`#查询牛牛`|查询自己或他人牛牛长度及注射量||
+---
 
-[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)
+[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)(或发送`#寸幼萱使用说明`)
