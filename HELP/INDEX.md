@@ -26,4 +26,4 @@
 |`#寸幼萱用户协议`|查看寸幼萱用户协议|✘|
 |[#寸幼萱淫趴帮助](/HELP/IMPACT.md)|查看寸幼萱淫趴帮助| ✘ |
 ---
-[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)(或发送`#寸幼萱淫趴帮助`)
+[点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)(或发送`#寸幼萱使用说明`)
