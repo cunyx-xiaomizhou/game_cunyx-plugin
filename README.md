@@ -48,7 +48,7 @@ pnpm restart
 
 - [寸幼萱插件帮助](/HELP/INDEX.md)(或发送`#寸幼萱帮助`)
 - [寸幼萱淫趴帮助](/HELP/IMPACT.md)(或发送`#寸幼萱淫趴帮助`)
-- [寸幼萱设置列表](/HELP/INSTALL.md)
+- [寸幼萱设置列表](/HELP/INSTALL.md)(或发送`#寸幼萱设置`)
 
 ---
 
