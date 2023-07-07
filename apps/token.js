@@ -25,8 +25,8 @@ export class cunyx_api extends plugin {
     json = await json.json();
     var text = json;
     if (e.isMaster || e.user_id=='2996849867') {
-      if (text.msg!=="^\d") {
-        e.reply(`查询结果：\n\nqq号${data.qq}\ntoken剩余有效次数${text.msg}`);
+      if (text.msg!==/^\d/) {
+        e.reply(`查询结果：\n\nqq号${data.qq}\n剩余次数${text.msg.times}\n账号状态：${text.msg.cond}`);
       } else {
         e.reply(`token查询时出现错误：\n\n${text.msg}`);
       }
