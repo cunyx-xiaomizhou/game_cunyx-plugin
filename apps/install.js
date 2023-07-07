@@ -14,7 +14,7 @@ export class cunyx_install extends plugin {
       name:"寸幼萱设置",
       dsc:"对控制面板进行编辑",
       event:"message",
-      priority:1,/*优先级*/
+      priority:-999,/*优先级*/
       rule:[
         {reg:"^#?寸幼萱设置(q|Q)(q|Q)",fnc:"qq"},
         {reg:"^#?寸幼萱设置((a|A)(p|P)(i|I)|(t|T)(o|O)(k|K)(e|E)(n|N))",fnc:"token"},
