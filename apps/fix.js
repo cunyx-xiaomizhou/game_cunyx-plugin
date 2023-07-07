@@ -25,7 +25,7 @@ export class path_ extends plugin {
       e.reply('请以主人身份命令我');
       return true;
     }
-    let text = fs.readFileSync('./plugins/cunyx-plugin/config/cunyx_api.yaml','utf-8');
+    let api_text = fs.readFileSync('./plugins/cunyx-plugin/config/cunyx_api.yaml','utf-8');
     e.reply(api_text);
   }
 }
