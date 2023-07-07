@@ -16,7 +16,7 @@ export class cunyx_impact extends plugin {
       name:"寸幼萱QQ淫趴",
       dsc:"寸幼萱QQ群淫趴小游戏",
       event:"message",
-      priority:500,/*优先级*/
+      priority:-9,/*优先级*/
       rule:[
         {reg:"^#?(淫|银|阴)(趴|扒|啪|爬)初始化",fnc:"int"},
         {reg:"^#?开启(淫|银|阴)(趴|扒|啪|爬)",fnc:"start"},
