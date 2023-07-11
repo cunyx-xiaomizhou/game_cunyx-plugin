@@ -39,7 +39,7 @@ compareFolders(folder1, folder2);
 const files = fs.readdirSync('./plugins/cunyx-plugin/apps').filter(file => file.endsWith('.js'));
 let ret = [];
 files.forEach((file) => {
-  ret.push(import(`./apps/${file}`));
+  ret.push(import (`./apps/${file}`));
 });
 ret = await Promise.allSettled(ret);
 let apps = {};
@@ -53,5 +53,6 @@ for (let i in files) {
   apps[name] = ret[i].value[Object.keys(ret[i].value)[0]];
 }
 logger.info('寸幼萱插件初始化完成');
+logger.info('有任何问题可以进入交流群提问786034611')
 logger.info(logger.red('~~~~~~~~~~~~~~~~~~~~'));
 export { apps };
