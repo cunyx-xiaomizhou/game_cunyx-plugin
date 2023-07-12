@@ -29,7 +29,8 @@ export class path_ extends plugin {
     try {
       let api_text = fs.readFileSync(process.cwd()+'/'+path,'utf-8');
     } catch (err) {
-      e.reply('该文件不存在')
+      e.reply('该文件不存在');
+      return true;
     }
     e.reply(api_text);
   }
