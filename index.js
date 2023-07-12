@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'path';
+import chalk from 'chalk';
 logger.info(logger.red('~~~~~~~~~~~~~~~~~~~~'));
 logger.info('开始寸幼萱插件初始化');
 const folder1 = process.cwd()+'/plugins/cunyx-plugin/config';
