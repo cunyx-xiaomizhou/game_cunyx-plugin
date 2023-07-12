@@ -27,11 +27,11 @@ export class path_ extends plugin {
     }
     let path = e.msg.replace(/查看文件|#/g, '').trim();
     try {
-      let api_text = fs.readFileSync(process.cwd()+'/'+path,'utf-8');
+      let text = fs.readFileSync(process.cwd()+'/'+path,'utf-8');
+      e.reply(text);
     } catch (err) {
       e.reply('该文件不存在');
       return true;
     }
-    e.reply(api_text);
   }
 }
