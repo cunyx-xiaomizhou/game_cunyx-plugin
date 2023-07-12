@@ -9,14 +9,14 @@ export class path_ extends plugin {
       priority:1,/*优先级*/
       rule:[
         {reg:"^#?机器人根目录",fnc:"path_"},
-        {reg:"^#?(a|A)(p|P)(i|I)文件内容",fnc:"api_text"}
+        {reg:"^#?查看文件",fnc:"look"}
       ]
     });
   }
   async path_ (e) {
     e.reply(process.cwd());
   }
-  async api_text (e) {
+  async look (e) {
     if (e.group_id) {
       e.reply('请在私聊使用');
       return true;
@@ -25,7 +25,12 @@ export class path_ extends plugin {
       e.reply('请以主人身份命令我');
       return true;
     }
-    let api_text = fs.readFileSync('./plugins/cunyx-plugin/config/cunyx_api.yaml','utf-8');
+    let path = e.msg.replace(/查看文件|#/g, '').trim();
+    try {
+      let api_text = fs.readFileSync(process.cwd()+'/'+path,'utf-8');
+    } catch (err) {
+      e.reply('该文件不存在')
+    }
     e.reply(api_text);
   }
 }
