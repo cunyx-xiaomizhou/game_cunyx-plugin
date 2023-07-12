@@ -28,7 +28,7 @@ function compareFolders(folder1, folder2) {
       const dest = path.join(folder1, path.relative(folder2, file2));
       if (!fs.existsSync(dest)) {
         fs.copyFileSync(file2, dest);
-        logger.info(`检测到文件${path.basename(file2)}初始化，需再次重启机器人才可生效！n请给机器人发送【#重启】指令完成本次初始化`);
+        logger.info(`检测到文件${path.basename(file2)}初始化，需再次重启机器人才可生效！\n请给机器人发送【#重启】指令完成本次初始化`);
       } else {
         logger.info(`配置文件${path.basename(file2)}已经存在，略过初始化~`);
       }
@@ -53,6 +53,6 @@ for (let i in files) {
   apps[name] = ret[i].value[Object.keys(ret[i].value)[0]];
 }
 logger.info('寸幼萱插件初始化完成');
-logger.info('有任何问题可以进入交流群提问786034611')
+logger.info(`~\t${chalk.green('寸幼萱交流群')}${'  '}${chalk.underline('786034611')}\t~`);
 logger.info(logger.red('~~~~~~~~~~~~~~~~~~~~'));
 export { apps };
