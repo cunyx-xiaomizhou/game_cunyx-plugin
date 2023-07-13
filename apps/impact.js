@@ -439,6 +439,7 @@ export class cunyx_impact extends plugin {
             "你的牛子变回"+yaml.long+"cm了\n你是想从新开导吗？",
             segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`)
           ];
+          e.reply(msg);
       });
     } catch (err) {
       e.reply('本群还没有淫趴文件，快发送【#淫趴初始化】来创建淫趴文件吧');
