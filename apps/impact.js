@@ -27,6 +27,7 @@ export class cunyx_impact extends plugin {
         {reg:"^#?导管子",fnc:"daoguanzi"},
         {reg:"^#?(日|透)群友",fnc:"fuck"},
         {reg:"^#?(决斗|对决|击剑)",fnc:"juedou"},
+        {reg:"^#?(重置|初始化)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"restart"},
         {reg:"^#?查(看|询)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"seek"}
       ]
     });
@@ -419,5 +420,8 @@ export class cunyx_impact extends plugin {
         e.reply('本群还没有淫趴文件，快发送【#淫趴初始化】来创建淫趴文件吧~');
       }
     }
+  }
+  async restart (e) {
+    e.reply('色批，写着呢，着急个p！');
   }
 }
