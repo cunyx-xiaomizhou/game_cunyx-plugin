@@ -72,7 +72,6 @@ pnpm restart
 |@pluto|插件早期参与测试|贡献者未同意公开|
 |@二羊妮|插件新功能测试|QQ号：`52484517`|
 | [@地球生物](https://gitee.com/jiang-zhitao-1)|`index.js`报错指导及`update.js`的写法思路|暂未取得贡献者同意|
-| [@小雨](https://gitee.com/SHIKEAIXY)|提供了`README.md`的访问量代码|QQ号：`536606294`|
 
 #### 七月发电榜
 排名不分先后
