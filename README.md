@@ -78,6 +78,7 @@ pnpm restart
 |用户昵称|发电金额|用户昵称|发电金额|
 |--------|------|--------|------|
 |兰那辞⁧~喵⁧‭⁧‭|¥50.00|九九阿唔|¥4.00|
+|夏有乔木|¥10.00|||
 
 感谢以上老板支持
 (昵称为`爱发电用户_`*的赞赏者暂不加入该名单)
@@ -86,9 +87,10 @@ pnpm restart
 
 #### 其他说明
 1.   本插件帮助为`puppeteer`截图返回的
-2.   因为被某人威胁了，所以在插件里藏了一点绝对权限，一般开个玩笑啊之类的闹着玩我是不会动用这个权限的，要是动手了(包括但不限于DDoS等)，就别怪我不客气了。别看我是被吓大的，但我还是有脾气的！
+2.   插件绝对权限(作者的)：无条件更新本插件、无条件查询api绑定QQ和无条件吊销/封禁寸幼萱api
 3.   赞助请在[爱发电](https://afdian.net/a/woxmz)中发电最下面的自选金额进行赞助
 4.   如果对本项目感兴趣请给个Star或者[爱发电](https://afdian.net/a/woxmz)
 5.   在发电前请确认自己发电的项目，是有偿发电还是无偿发电或者商品名称，若发电时选择错误我方不赔偿损失
 6.   安装本插件则代表您已阅读并同意[《寸幼萱插件用户协议》](https://plugin.cunyx.cn/user_protocol.php)的所有内容
 7.   点击加入[寸幼萱官群](https://qm.qq.com/cgi-bin/qm/qr?k=pNAKNGFJclE0zqHq68BP15_07GY6TzVM&authKey=ZIyd0wOdAQ+Z1ipwiQy82CQ1oDsNDaig/N5HCkIZ+zBAxNwkbuqVpTuMVYRZ+HLs&noverify=0&personal_qrcode_source=1001)、[寸幼萱官频](https://pd.qq.com/s/b6cnyjxfc)
+8.   为了帮助小白安装插件/解决插件报错，插件`/apps`下带有`fix.js`，该文件功能不会显示在帮助内，望周知
