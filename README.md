@@ -18,6 +18,8 @@
 [![](https://img.shields.io/badge/Author-寸幼萱-DeepSkyBlue)](https://gitee.com/cunyx)
 <a href='https://gitee.com/cunyx/cunyx-plugin/stargazers'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
 <a href='https://gitee.com/cunyx/cunyx-plugin/members'><img src='https://gitee.com/cunyx/cunyx-plugin/badge/fork.svg?theme=dark' alt='fork'></img></a>
+<a href='https://github.com/cunyx-xiaomizhou/cunyx-plugin/stargazers'><img src='https://github.com/cunyx-xiaomizhou/cunyx-plugin/badge/star.svg?theme=dark' alt='star'></img></a>
+<a href='https://github.com/cunyx-xiaomizhou/cunyx-plugin/members'><img src='https://github.com/cunyx-xiaomizhou/cunyx-plugin/badge/fork.svg?theme=dark' alt='fork'></img></a>
 
 <center>本文访问量</center>
 
