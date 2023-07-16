@@ -98,7 +98,7 @@ export class cunyx_impact extends plugin {
   }
   async start (e) {
     if (e.group_id) {
-      if (e.isMaster || e.group.is_admin || e.group.is_owner) {
+      if (e.isMaster || e.group.is_admin == true || e.group.is_owner == true ) {
         let json = JSON.parse(fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`));
         json.cond = '1';
         fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(json), (err) => {
