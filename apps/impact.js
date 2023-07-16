@@ -1,6 +1,5 @@
 import plugin from './../../../lib/plugins/plugin.js';
 import { segment } from 'oicq';
-import { member } from 'icqq';
 import YAML from 'yaml';
 import fs from 'fs';
 
@@ -35,7 +34,7 @@ export class cunyx_impact extends plugin {
   }
   async int (e) {
     if (e.group_id) {
-      if (e.isMaster || e.group.is_admin || e.group.is_owner) {
+      if (e.isMaster || e.member.is_owner || e.member.is_admin) {
         try {
           fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`);
         } catch (err) {
@@ -99,7 +98,7 @@ export class cunyx_impact extends plugin {
   }
   async start (e) {
     if (e.group_id) {
-      if (e.isMaster || member.is_owner || member.is_admin ) {
+      if (e.isMaster || e.member.is_owner || e.member.is_admin ) {
         let json = JSON.parse(fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`));
         json.cond = '1';
         fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(json), (err) => {
@@ -114,7 +113,7 @@ export class cunyx_impact extends plugin {
     }
   }
   async close (e) {
-    if (e.isMaster || member.is_owner || member.is_admin) {
+    if (e.isMaster || e.member.is_owner || e.member.is_admin) {
       try {
         let data_json = JSON.parse(fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`));
         if (data_json.cond=='0') {
