@@ -1,5 +1,6 @@
 import plugin from './../../../lib/plugins/plugin.js';
 import { segment } from 'oicq';
+import { member } from 'icqq';
 import YAML from 'yaml';
 import fs from 'fs';
 
