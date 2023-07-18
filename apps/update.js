@@ -51,9 +51,22 @@ export class cunyx_update extends plugin {
       }
       let bot_package = JSON.parse(fs.readFileSync('./package.json','utf-8'));
       let bot_name = bot_package.name;
-      e.reply('寸幼萱插件更新成功，正在尝试重启'+bot_name+'以新版本生效...');
-        /*exec('pnpm restart',{cwd:`${prosessPath}`}, function (error, stdout, stderr){
-          if (/重启/)
+      e.reply('寸幼萱插件更新成功，正在尝试重启'+bot_name+'以新版本生效...\n(你还是手动重启吧，自动重启还在咕咕)');
+        /*let command_ = 'pnpm run start'
+        if (process.argv[1].includes('pm2')) { command_ = 'pnpm run restart' }
+        exec('pnpm restart',{cwd:`${prosessPath}`}, function (error, stdout, stderr){
+          if (error) {
+            e.reply('寸幼萱拉取'+bot_name+'重启失败，请手动重启机器人\n\n原因：\n'+error);
+            logger.error('机器人重启失败\n'+error);
+            return true;
+          } else {
+            if (stdout) {
+              logger.info('机器人重启成功啦，进入后台运行~');
+              //写入一个文件，在下次重启时判断是否为寸幼萱插件发起的重启
+              fs.writeFileSync(`${process.cwd()}/data/restart.json`,);
+              return true;
+            }
+          }
         });*/
       });
       return true;
