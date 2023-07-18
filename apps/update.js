@@ -51,8 +51,10 @@ export class cunyx_update extends plugin {
       }
       let bot_package = JSON.parse(fs.readFileSync('./package.json','utf-8'));
       let bot_name = bot_package.name;
-      e.reply('寸幼萱插件更新成功，请手动重启'+bot_name+'以应用更新...');
-        return true;
+      e.reply('寸幼萱插件更新成功，正在尝试重启'+bot_name+'以新版本生效...');
+        /*exec('pnpm restart',{cwd:`${prosessPath}`}, function (error, stdout, stderr){
+          if (/重启/)
+        });*/
       });
       return true;
     } else {
