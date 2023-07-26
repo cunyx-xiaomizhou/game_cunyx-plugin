@@ -34,7 +34,7 @@ export class cunyx_impact extends plugin {
   }
   async int (e) {
     if (e.group_id) {
-      if (e.isMaster || e.member.is_owner || e.member.is_admin) {
+      if (e.isMaster) {
         try {
           fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`);
         } catch (err) {
@@ -46,7 +46,7 @@ export class cunyx_impact extends plugin {
         }
         e.reply('本群淫趴已经初始化了，不用再次初始化哦~');
       } else {
-        e.reply('你没有权限初始化本群淫趴！');
+        e.reply('只有我的主人才能初始化本群淫趴文件');
       }
     } else {
       e.reply('该功能只能在群聊使用哦~');
