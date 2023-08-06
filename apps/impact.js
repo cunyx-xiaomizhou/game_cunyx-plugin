@@ -24,8 +24,8 @@ export class cunyx_impact extends plugin {
         {reg:"^#?(淫|银|阴)(趴|扒|啪|爬|)状态",fnc:"cond"},
         {reg:"^#?(重置|初始化)(淫|银|阴)(趴|扒|啪|爬)(控|配)(置|制)(面板)?",fnc:"reset"},
         {reg:"^#?(创建|生成)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"append"},
-        {reg:"^#?导管子",fnc:"daoguanzi"},
-        {reg:"^#?(日|透)群友",fnc:"fuck"},
+        {reg:"^#?打胶",fnc:"daoguanzi"},
+        {reg:"^#?(日|透)",fnc:"fuck"},
         {reg:"^#?(决斗|对决|击剑)",fnc:"juedou"},
         {reg:"^#?(重置|初始化)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"restart"},
         {reg:"^#?查(看|询)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"seek"}
@@ -180,7 +180,7 @@ export class cunyx_impact extends plugin {
           }
         }
         var res_yp_cond = JSON.parse(fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`));
-        e.reply('查询结果：\n牛牛长度：'+res_yp_cond.data[qq].long+'cm\n注射总量：'+res_yp_cond.data[qq].inject+'ml\n共被注射：'+res_yp_cond.data[qq].be_inject+'ml');
+        e.reply('查询结果：\n牛牛长度：'+res_yp_cond.data[qq].long+'cm\n注射总量：'+res_yp_cond.data[qq].inject+'ml\n共被注射：'+res_yp_cond.data[qq].be_inject+'ml，真是一群变态');
       } catch (err) {
         let qq = e.msg.replace(/查(看|询)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)|#/g, '').trim();
         if (qq=='') {
@@ -205,7 +205,7 @@ export class cunyx_impact extends plugin {
   }
   async daoguanzi (e) {
     try {
-      let qq = e.msg.replace(/导管子|#/g, '').trim();
+      let qq = e.msg.replace(/打胶|#/g, '').trim();
       if (qq=='') {
         qq = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
         if (qq=='') {
@@ -277,7 +277,7 @@ export class cunyx_impact extends plugin {
       }
       let qq = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
       if (qq == '') {
-        let qq = e.msg.replace(/(日|透)群友|#/g,'').trim();
+        let qq = e.msg.replace(/(日|透)|#/g,'').trim();
         qq = qq;
         if (qq !== /^\d/) {
           e.reply('你都不把你要日的人at出来，我该怎么知道你要日谁？！！');
@@ -291,20 +291,20 @@ export class cunyx_impact extends plugin {
       try {
         if (yp_cond.data[e.user_id].long < yaml.riqunyou_least) {
           let msg = [
-            "你的牛牛太短了，只有"+yp_cond.data[e.user_id].long+"cm，都没办法进入ta！\n想要进入ta，你至少需要"+yaml.riqunyou_least+"cm的牛牛。快发送【#导管子】让你的牛牛变长吧！",
+            "你的牛牛太短了，只有"+yp_cond.data[e.user_id].long+"cm，小辣鸡！都没办法捅入ta！\n想要捅入ta，你至少需要"+yaml.riqunyou_least+"cm的牛牛。多去【#打胶】让你的牛牛变长吧！",
             segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`),
             ];
             e.reply(msg);
           return true;
         }
         if (!yp_cond.data[qq]) {
-          e.reply('对方还没有牛牛哦，换个人日吧');
+          e.reply('对方还没有牛牛哦，换个人撅吧');
           return true;
         }
         if (yp_cond.data[e.user_id].cd_riqunyou > Date.now()) {
           let time = yp_cond.data[e.user_id].cd_riqunyou - Date.now();
           let times = time / 1000;
-          e.reply(`你已经被榨干了，距离你恢复还有${times}秒`);
+          e.reply(`你已经被榨干了，软男！距离你恢复还有${times}秒`);
         } else {
           let time = yaml.cd_riqunyou * 1000;
           let times = Date.now() + time;
@@ -325,7 +325,7 @@ export class cunyx_impact extends plugin {
             fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
               if (err) throw err;
               let msg = [
-                "你献祭了"+die_niuzi+"cm牛子，给Ta注射了"+zhushe+"ml的脱氧核糖核酸~",
+                "透的好猛，对方也好紧，你的牛牛要被夹爆了！你损伤了"+die_niuzi+"cm牛子，给Ta注射了"+zhushe+"ml的脱氧核糖核酸~",
                 segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`),
                 ];
                 e.reply(msg);
@@ -368,7 +368,7 @@ export class cunyx_impact extends plugin {
           return true;
         }
         if (!yp_cond.data[qq]) {
-          e.reply('对方连牛牛都没有，怎么和ta决斗？');
+          e.reply('对方连牛牛都没有，是个人妖，你怎么和ta决斗？');
           return true;
         }
         if (!yp_cond.data[e.user_id]) {
@@ -378,7 +378,7 @@ export class cunyx_impact extends plugin {
         if (yp_cond.data[e.user_id].cd_juedou > Date.now()) {
           let time = yp_cond.data[e.user_id].cd_juedou - Date.now();
           let times = time / 1000;
-          e.reply(`你已经被榨干了，距离你恢复还有${times}秒`);
+          e.reply(`软男！你已经被榨干了，距离你恢复还有${times}秒`);
         } else {
           yp_cond.data[e.user_id].cd_juedou = Date.now() + yaml.cd_juedou * 1000 ;
           fs.writeFile(`${path}/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
@@ -436,7 +436,7 @@ export class cunyx_impact extends plugin {
       fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond),(err) => {
           if (err) throw err;
           let msg = [
-            "你的牛子变回"+yaml.long+"cm了\n你是想从新开导吗？",
+            "你舍去了这根牛子，并用全部功力重新长了一根"+yaml.long+"cm的牛子",
             segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${e.user_id}`)
           ];
           e.reply(msg);
