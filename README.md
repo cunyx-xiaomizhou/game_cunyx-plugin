@@ -43,7 +43,7 @@ cd Yunzai-Bot
 2.  拉取项目
 ```bash
 #使用Gitee拉取
-git clone  --depth=1 https://https://gitee.com/v173609663/cunyx-plugin/
+git clone  --depth=1 https://gitee.com/v173609663/cunyx-plugin/
 ```
 
 3.  重启机器人，生效控制面板
