@@ -406,7 +406,7 @@ export class cunyx_impact extends plugin {
               yp_cond.data[qq].long = yp_cond.data[qq].long + win_niuzi;
               yp_cond.data[e.user_id].long = yp_cond.data[e.user_id].long - die_niuzi;
               let msg = [
-                "对决失败了，你给废材！\n你的牛牛不堪受辱缩小了"+die_niuzi+"cm了，但是对方洋洋得意，Ta的牛牛当着你的面增长了"+win_niuzi+"cm。\n你的牛牛现在是"+yp_cond.data[e.user_id].long+'cm',
+                "对决失败了，你个废材！\n你的牛牛不堪受辱缩小了"+die_niuzi+"cm了，但是对方洋洋得意，Ta的牛牛当着你的面增长了"+win_niuzi+"cm。\n你的牛牛现在是"+yp_cond.data[e.user_id].long+'cm',
                 segment.image(`https://q1.qlogo.cn/g?b=qq&s=0&nk=${qq}`)
               ];
               fs.writeFile(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`, JSON.stringify(yp_cond), (err) => {
