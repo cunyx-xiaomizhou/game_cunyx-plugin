@@ -189,7 +189,7 @@ export class cunyx_impact extends plugin {
               qq=e.user_id;
             }
         }
-        e.reply(`@${qq} 还没有牛牛，快发送【#创建牛牛】来创建一个吧~（你个没有牛牛的废材！）`);
+        e.reply(`@${qq} 连牛牛都没有，快发送【#创建牛牛】来创建一个吧~（你个没有牛牛的废材！）`);
       }
     } catch (err) {
       e.reply('本群还没有淫趴文件，请发送【#淫趴初始化】来创建淫趴文件');
@@ -255,10 +255,10 @@ export class cunyx_impact extends plugin {
             });
           }
         } catch (err) {
-          e.reply('你或者对方还没有牛牛，快发送【#创建牛牛】来创建一个吧');
+          e.reply('你或者对方有一个没有牛牛，快发送【#创建牛牛】来创建一个吧');
         }
       } catch (err) {
-        e.reply('你还没有牛牛，不能帮别人导管子；\n快发送【#创建牛牛】来创建一个吧~');
+        e.reply('你连牛牛都没有，不能帮别人导管子；\n快发送【#创建牛牛】来创建一个吧~');
       }
     } catch (err) {
       e.reply('本群还没有淫趴文件，快发送【#淫趴初始化】来创建淫趴文件吧~');
@@ -298,7 +298,7 @@ export class cunyx_impact extends plugin {
           return true;
         }
         if (!yp_cond.data[qq]) {
-          e.reply('对方还没有牛牛哦，换个人撅吧');
+          e.reply('对方连牛牛都没有，换个人撅吧');
           return true;
         }
         if (yp_cond.data[e.user_id].cd_riqunyou > Date.now()) {
@@ -333,7 +333,7 @@ export class cunyx_impact extends plugin {
           });
         }
       } catch (err) {
-        e.reply('你个没有牛牛的废材，发送【#创建牛牛】来创建一个吧');
+        e.reply('你都没有牛牛，搞啥呢？发送【#创建牛牛】去长一根吧');
       }
     } catch (err) {
       e.reply('本群还没有淫趴文件，快发送【#淫趴初始化】来创建淫趴文件吧~');
@@ -372,7 +372,7 @@ export class cunyx_impact extends plugin {
           return true;
         }
         if (!yp_cond.data[e.user_id]) {
-          e.reply('你还没有牛牛，快发送【#创建牛牛】来创建一个吧');
+          e.reply('你都没有牛牛，搞啥呢？发送【#创建牛牛】去长一根吧');
           return true;
         }
         if (yp_cond.data[e.user_id].cd_juedou > Date.now()) {
@@ -429,7 +429,7 @@ export class cunyx_impact extends plugin {
     try {
       let yp_cond = JSON.parse(fs.readFileSync(`${process.cwd()}/plugins/cunyx-plugin/data/impact/${e.group_id}.json`));
       if (yp_cond.cond == '0') {
-        e.reply('本群没有开启淫趴，快让机器人主人或管理员发送【#开启淫趴】指令开启本群淫趴吧');
+        e.reply('本群没有开启淫趴，快让机器人主人或狗管理发送【#开启淫趴】指令开启本群淫趴吧');
         return true;
       }
       yp_cond.data[e.user_id].long = yaml.long;
