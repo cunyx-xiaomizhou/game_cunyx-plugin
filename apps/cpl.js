@@ -22,6 +22,9 @@ export class plugin_name extends plugin {
       qq = e.user_id;
     } else {
       qq = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
+      if (qq == '') {
+        qq = e.user_id;
+      }
     }
     try {
       let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/cpl.php?qq=${data.qq}&token=${data.api}`);
