@@ -24,8 +24,8 @@ export class cunyx_impact extends plugin {
         {reg:"^#?(淫|银|阴)(趴|扒|啪|爬|)状态",fnc:"cond"},
         {reg:"^#?(重置|初始化)(淫|银|阴)(趴|扒|啪|爬)(控|配)(置|制)(面板)?",fnc:"reset"},
         {reg:"^#?(创建|生成)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"append"},
-        {reg:"^#?打胶",fnc:"daoguanzi"},
-        {reg:"^#?(日|透)",fnc:"fuck"},
+        {reg:"^#?(导管子|打胶|开导)",fnc:"daoguanzi"},
+        {reg:"^#?(日|透)(群友)?",fnc:"fuck"},
         {reg:"^#?(决斗|对决|击剑)",fnc:"juedou"},
         {reg:"^#?(重置|初始化)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"restart"},
         {reg:"^#?查(看|询)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"seek"}
@@ -205,7 +205,7 @@ export class cunyx_impact extends plugin {
   }
   async daoguanzi (e) {
     try {
-      let qq = e.msg.replace(/打胶|#/g, '').trim();
+      let qq = e.msg.replace(/(导管子|打胶|开导)|#/g, '').trim();
       if (qq=='') {
         qq = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
         if (qq=='') {
@@ -277,7 +277,7 @@ export class cunyx_impact extends plugin {
       }
       let qq = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
       if (qq == '') {
-        let qq = e.msg.replace(/(日|透)|#/g,'').trim();
+        let qq = e.msg.replace(/(日|透)(群友)?|#/g,'').trim();
         qq = qq;
         if (qq !== /^\d/) {
           e.reply('你都不把你要日的人at出来，我该怎么知道你要日谁？！！');
