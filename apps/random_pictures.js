@@ -36,6 +36,10 @@ export class plugin_name extends plugin {
           reg: "^#?(全彩|动漫)?白圣女表情包",
           fnc: "Cecilia_Anime",
         },
+        {
+          reg: "^#?随机甘城(猫猫)?(表情包)?",
+          fnc: "gancheng",
+        },
       ],
     });
   }
@@ -73,6 +77,11 @@ export class plugin_name extends plugin {
   // 彩色白圣女
     async Cecilia_Anime(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud/Cecilia_Anime`))
+    return true
+    }
+    // 甘城猫猫
+    async gancheng(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud`))
     return true
     }
 }
