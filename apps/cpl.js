@@ -32,6 +32,7 @@ export class plugin_name extends plugin {
       var text = json;
       let msg = [
         segment.at(qq),
+        "【",Bot.fl.get(qq).nickname,"】",
         "\n",
         text.msg
       ];
