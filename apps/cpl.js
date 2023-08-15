@@ -30,12 +30,20 @@ export class plugin_name extends plugin {
       let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/cpl.php?qq=${data.qq}&token=${data.api}`);
       json = await json.json();
       var text = json;
-      let msg = [
-        segment.at(qq),
-        "【",Bot.fl.get(qq).nickname,"】",
-        "\n",
-        text.msg
-      ];
+      try {
+        let msg = [
+          segment.at(qq),
+          "【",Bot.fl.get(qq).nickname,"】",
+          "\n",
+          text.msg
+        ];
+      } catch (err) {
+        let msg = [
+          segment.at(qq),
+          "\n",
+          text.msg,
+        ];
+      }
       e.reply(msg);
     } catch (err) {
       e.reply('api请求错误');
