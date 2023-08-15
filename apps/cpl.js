@@ -4,6 +4,7 @@ import { segment } from 'oicq';
 import YAML from 'yaml';
 import fs from 'fs';
 let qq;
+let msg;
 let data = YAML.parse(fs.readFileSync('./plugins/cunyx-plugin/config/cunyx_api.yaml','utf-8'));
 export class plugin_name extends plugin {
   constructor () {
@@ -37,12 +38,14 @@ export class plugin_name extends plugin {
           "\n",
           text.msg
         ];
+        msg = msg;
       } catch (err) {
         let msg = [
           segment.at(qq),
           "\n",
           text.msg,
         ];
+        msg = msg;
       }
       e.reply(msg);
     } catch (err) {
