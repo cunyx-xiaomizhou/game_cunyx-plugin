@@ -38,16 +38,15 @@ export class plugin_name extends plugin {
           "\n",
           text.msg
         ];
-        msg = msg;
+        e.rpely(msg);
       } catch (err) {
         let msg = [
           segment.at(qq),
           "\n",
           text.msg,
         ];
-        msg = msg;
+        e.reply(msg);
       }
-      e.reply(msg);
     } catch (err) {
       e.reply('api请求错误');
     }
