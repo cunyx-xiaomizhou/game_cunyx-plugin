@@ -1,5 +1,5 @@
 import plugin from '../../../lib/plugins/plugin.js';
-export class plugin_name extends plugin {
+export class random_pictures extends plugin {
 
   constructor() {
     super({
@@ -9,7 +9,7 @@ export class plugin_name extends plugin {
       priority: 1, // 优先级
       rule: [
         {
-          reg: "^#?(随机爱坤|随机ikun|小黑子|随机坤图)",
+          reg: "^#?随机(爱坤|ikun|坤图)|小黑子",
           fnc: "ikun",
         },
         {
@@ -39,6 +39,26 @@ export class plugin_name extends plugin {
         {
           reg: "^#?随机甘城(猫猫)?(表情包)?",
           fnc: "gancheng",
+        },
+        {
+          reg: "^#?随机(诺诺|兔兔|宇佐纪诺诺|usagi)(表情包)?",
+          fnc: "usagi",
+        },
+        {
+          reg: "^#?随机柴郡(猫猫)?(表情包)?",
+          fnc: "Cheshire",
+        },
+        {
+          reg: "^#?随机(珊瑚宫)?心海(表情包)?",
+          fnc: "kokomi",
+        },
+        {
+          reg: "^#?随机滑稽(表情包)?",
+          fnc: "funny",
+        },
+        {
+          reg: "^#?(一眼|一言)(丁真|顶针)",
+          fnc: "Tenzin",
         },
       ],
     });
@@ -82,6 +102,31 @@ export class plugin_name extends plugin {
     // 甘城猫猫
     async gancheng(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud`))
+    return true
+    }
+    // 宇佐紀ノノ_usagi
+    async usagi(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/usagi`))
+    return true
+    }
+    // 柴郡猫
+    async Cheshire(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Cheshire`))
+    return true
+    }
+    // 珊瑚宫心海
+    async kokomi(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Kokomi`))
+    return true
+    }
+    // 滑稽图
+    async funny(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/funny`))
+    return true
+    }
+    // 一眼丁真
+    async Tenzin(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Tenzin`))
     return true
     }
 }
