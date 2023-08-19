@@ -62,7 +62,7 @@ export class random_pictures extends plugin {
         },
         {
           reg: "^#?随机?(龙|l|L)(图|t|T)",
-          fnc: "long",
+          fnc: "longtu",
         },
       ],
     });
@@ -134,7 +134,7 @@ export class random_pictures extends plugin {
     return true
     }
     // 龙图
-    async long(e) {
+    async longtu(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud/long`))
     return true
     }
