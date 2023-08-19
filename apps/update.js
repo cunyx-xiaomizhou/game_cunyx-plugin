@@ -260,8 +260,9 @@ export class Update extends plugin {
     }
     return true
   }
-  
-  async function sendMsg(e, msg) {
+}
+
+async function sendMsg(e, msg) {
   let data_msg = [];
   for (let i = 0; i < msg.length; i++) {
     if (msg[i].startsWith('http') || msg[i].startsWith('data:image')) {
@@ -286,5 +287,4 @@ export class Update extends plugin {
     e.reply("消息发送失败，可能被风控~");
   }
   return true;
-    }
-}
+  }
