@@ -134,7 +134,7 @@ export class random_pictures extends plugin {
     return true
     }
     // 龙图
-    async Tenzin(e) {
+    async long(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud/long`))
     return true
     }
