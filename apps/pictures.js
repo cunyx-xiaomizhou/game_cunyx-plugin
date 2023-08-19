@@ -57,8 +57,12 @@ export class random_pictures extends plugin {
           fnc: "funny",
         },
         {
-          reg: "^#?(一眼|一言)(丁真|顶针)",
+          reg: "^#?(一眼|一言|随机)(丁真|顶针)",
           fnc: "Tenzin",
+        },
+        {
+          reg: "^#?随机?(龙|l|L)(图|t|T)",
+          fnc: "long",
         },
       ],
     });
@@ -101,7 +105,7 @@ export class random_pictures extends plugin {
     }
     // 甘城猫猫
     async gancheng(e) {
-    this.e.reply(segment.image(`http://api.dengfenglai.cloud`))
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Natsuki`))
     return true
     }
     // 宇佐紀ノノ_usagi
@@ -127,6 +131,11 @@ export class random_pictures extends plugin {
     // 一眼丁真
     async Tenzin(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud/Tenzin`))
+    return true
+    }
+    // 龙图
+    async Tenzin(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/long`))
     return true
     }
 }
