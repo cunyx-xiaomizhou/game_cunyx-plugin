@@ -1,5 +1,5 @@
 import plugin from '../../../lib/plugins/plugin.js';
-export class random_pictures extends plugin {
+export class Pictures extends plugin {
 
   constructor() {
     super({
