@@ -29,5 +29,6 @@
 |`#寸幼萱帮助`|寸幼萱帮助功能，让你更快上手寸幼萱插件|✘|
 |[`#寸幼萱淫趴帮助`(可点击跳转)](/HELP/IMPACT.md)|查看寸幼萱淫趴帮助| ✘ |
 |[`#寸幼萱设置`(可点击跳转)](/HELP/INSTALL.md)|查看可供设置的参数| ✘ |
+|[`随机图片API](https://api.dengfenglai.cloud/) | 提供随机API的接口 |
 ---
 [点此返回README.md](https://gitee.com/cunyx/cunyx-plugin)(或发送`#寸幼萱使用说明`)
