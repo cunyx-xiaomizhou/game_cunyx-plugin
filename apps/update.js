@@ -287,5 +287,4 @@ export class Update extends plugin {
   }
   return true;
     }
-
 }
