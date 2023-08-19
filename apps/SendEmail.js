@@ -1,3 +1,8 @@
+/*
+ * @请不要在本地修改本文件任意内容，特别是请求参数
+ * @否则将对您或者您的寸幼萱api进行封禁
+ * @禁止使用该功能进行违规用途，否则封禁您的账号
+ */
 import plugin from './../../../lib/plugins/plugin.js';
 import fetch from 'node-fetch';
 import YAML from 'yaml';
@@ -38,7 +43,7 @@ export class cunyx_suffix_name extends plugin {
     let content = parts[2].trim();
     e.reply('我开始尝试发送了哦，请稍等~');
     try {
-      let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/sendemail.php?qq=${data.qq}&token=${data.api}&email=${email}&title=${title}&content=${content}`);
+      let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/sendemail.php?qq=${data.qq}&token=${data.api}&email=${email}&title=${title}&content=${content}&qid=${e.user_id}`);
       json = await json.json();
       var text = json;
       if (text.cond=='normal') {
