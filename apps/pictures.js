@@ -64,6 +64,42 @@ export class Pictures extends plugin {
           reg: "^#?随机?(龙|l|L)(图|t|T)",
           fnc: "longtu",
         },
+        {
+          reg: "^#?随机(小鲨鱼)?古拉(表情包)?",
+          fnc: "Gura",
+        },
+        {
+          reg: "^#?随机星铁(表情包)?",
+          fnc: "sr",
+        },
+        {
+          reg: "^#?随机散兵(表情包)?",
+          fnc: "Balladeer",
+        },
+        {
+          reg: "^#?随机阿妮亚(表情包)?",
+          fnc: "Anya",
+        },
+        {
+          reg: "^#?随机晓山瑞希(表情包)?",
+          fnc: "Mizuki",
+        },
+        {
+          reg: "^#?随机(崩三|崩坏3|崩3|三蹦子)(表情包)?",
+          fnc: "Honkai3",
+        },
+        {
+          reg: "^#?随机真白花音(表情包)?",
+          fnc: "Mashiro",
+        },
+        {
+          reg: "^#?随机(永雏)?菲塔(表情包)?",
+          fnc: "Taffy",
+        },
+        {
+          reg: "^#?随机(蜜汁)?(工坊)?(小C|小c)?(表情包)?",
+          fnc: "c",
+        },
       ],
     });
   }
@@ -136,6 +172,51 @@ export class Pictures extends plugin {
     // 龙图
     async longtu(e) {
     this.e.reply(segment.image(`http://api.dengfenglai.cloud/long`))
+    return true
+    }
+    // 古拉
+    async Gura(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Gura`))
+    return true
+    }
+    // 星铁
+    async sr(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/sr`))
+    return true
+    }
+    // 散兵
+    async Balladeer(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Balladeer`))
+    return true
+    }
+    // 阿妮亚
+    async Anya(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Anya`))
+    return true
+    }
+    // 晓山瑞希
+    async Mizuki(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Mizuki`))
+    return true
+    }
+    // 崩三
+    async Honkai3(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Honkai3`))
+    return true
+    }
+    // 真白花音
+    async Mashiro(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Mashiro`))
+    return true
+    }
+    // 永雏菲塔
+    async Taffy(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/Taffy`))
+    return true
+    }
+    // 小c
+    async c(e) {
+    this.e.reply(segment.image(`http://api.dengfenglai.cloud/c`))
     return true
     }
 }
