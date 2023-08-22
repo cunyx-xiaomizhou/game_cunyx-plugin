@@ -14,7 +14,7 @@ export class plugin_name extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?(撩(我)?|土味情话)",fnc:"cheesy_pick_up_lines"}
+        {reg:"^#?(撩(我)?|土味情话)$",fnc:"cheesy_pick_up_lines"}
       ]
     });
   }

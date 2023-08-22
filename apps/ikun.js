@@ -18,7 +18,7 @@ export class ikun_card extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?ikun",fnc:"ikun",}
+        {reg:"^#?ikun$",fnc:"ikun",}
       ]
     });
   }

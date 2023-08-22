@@ -14,7 +14,7 @@ export class cunyx_ai extends plugin {
       event:"message",
       priority:5001,/*优先级*/
       rule:[
-        {reg:"^#?(a|A)(i|I)",fnc:"ai"}
+        {reg:"^#(a|A)(i|I)",fnc:"ai"}
       ]
     });
   }

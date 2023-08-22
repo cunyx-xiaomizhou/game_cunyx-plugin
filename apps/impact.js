@@ -24,7 +24,7 @@ export class cunyx_impact extends plugin {
         {reg:"^#?(淫|银|阴)(趴|扒|啪|爬|)状态",fnc:"cond"},
         {reg:"^#?(重置|初始化)(淫|银|阴)(趴|扒|啪|爬)(控|配)(置|制)(面板)?",fnc:"reset"},
         {reg:"^#?(创建|生成)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"append"},
-        {reg:"^#?(导管子|打胶|开导)",fnc:"daoguanzi"},
+        {reg:"^#?(导管子|打胶|开导)$",fnc:"daoguanzi"},
         {reg:"^#?(日|透)(群友)",fnc:"fuck"},
         {reg:"^#?(决斗|对决|击剑)",fnc:"juedou"},
         {reg:"^#?(重置|初始化)(牛|鸡|坤|j|J)(牛|子|坤|八|巴|8|鸡)",fnc:"restart"},

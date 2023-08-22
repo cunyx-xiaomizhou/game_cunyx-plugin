@@ -13,7 +13,7 @@ export class cunyx_api extends plugin {
       event:"message",/*抄的，不知道啥玩意*/
       priority:-999999999,/*优先级*/
       rule:[
-        {reg:"^#?(.*)?(寸幼萱|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(t|T|a|A)(.*)?",
+        {reg:"^#?(.*)?(寸幼萱|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(t|T|a|A)(.*)?$",
           fnc:"api",},
         {reg:"^#?寸幼萱查看当前绑定",fnc:"ck"}
       ]

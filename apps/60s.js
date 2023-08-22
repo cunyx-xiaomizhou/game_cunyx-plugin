@@ -5,9 +5,9 @@ export class news extends plugin {
       name:"每日60秒",
       dsc:"每日60秒看世界",
       event:"message",
-      priority:-99999999,/*优先级*/
+      priority:500,/*优先级*/
       rule:[
-        {reg:"^#?(每|今)日(60(秒|s|S)|新闻|早报)",fnc:"news",}
+        {reg:"^#?(每|今)日(60(秒|s|S)|新闻|早报)$",fnc:"news",}
       ]
     });
   }
