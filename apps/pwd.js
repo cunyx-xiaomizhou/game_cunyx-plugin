@@ -60,7 +60,7 @@ export class cunyx_pwd extends plugin {
       var text = json;
       if (text.msg!="err") {
         e.reply(`按照key=${config.key}加密后为：`);
-        setTimeout(() {
+        setTimeout(function() {
             e.reply(text.msg,true);
         }, 200);
       } else {
