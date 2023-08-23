@@ -1,6 +1,7 @@
 import plugin from '../../../lib/plugins/plugin.js';
 import { createRequire } from 'module';
 import _ from 'lodash';
+import fetch from 'node-fetch';
 import fs from 'fs';
 import { Restart } from '../../other/restart.js';
 import common from '../lib/common/common.js';
