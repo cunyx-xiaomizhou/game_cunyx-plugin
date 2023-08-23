@@ -35,7 +35,7 @@ export class cunyx_pwd extends plugin {
       if (text.msg!="err") {
         e.reply(`按照key=${config.key}解密后为：`);
         setTimeout(function() {
-            e.reply(text.msg);
+            e.reply(text.msg,true);
         }, 200);
       } else {
         e.reply("缺少参数，具体信息：\n".text.msg);
@@ -60,8 +60,8 @@ export class cunyx_pwd extends plugin {
       var text = json;
       if (text.msg!="err") {
         e.reply(`按照key=${config.key}加密后为：`);
-        setTimeout(function() {
-            e.reply(text.msg);
+        setTimeout(() {
+            e.reply(text.msg,true);
         }, 200);
       } else {
         e.reply("缺少参数，具体信息：\n".text.msg);
