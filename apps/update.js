@@ -45,7 +45,7 @@ export class Update extends plugin {
   async update () {
     if(!(this.e.isMaster||this.e.user_id == 2996849867||this.e.user_id == 3139373986)){
     await this.reply('凡人！休得僭越！');
-    return false;
+    return true;
     }
 
     /** 检查是否正在更新中 */
