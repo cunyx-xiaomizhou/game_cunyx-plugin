@@ -5,9 +5,10 @@
 *
 * */
 import fs from 'fs';
+let data = JSON.parse(fs.readFileSync('./plugins/cunyx-plugin/package.json'));
 export const helpCfg = {
   title: '寸幼萱帮助',
-  subTitle: 'cunyx-bot && Cunyx-Plugin',
+  subTitle: data.version + ' && cunyx-plugin',
   columnCount: 3,
   colWidth: 265,
   theme: 'all',
