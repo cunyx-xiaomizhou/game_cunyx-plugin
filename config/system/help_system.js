@@ -5,7 +5,6 @@
 *
 * */
 import fs from 'fs';
-import YAML from 'yaml';
 export const helpCfg = {
   title: '寸幼萱帮助',
   subTitle: 'cunyx-bot && Cunyx-Plugin',
