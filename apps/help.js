@@ -1,65 +1,72 @@
-import plugin from './../../../lib/plugins/plugin.js';
-import puppeteer from 'puppeteer';
-import { segment }from 'oicq';
-import fs from 'fs';
+import plugin from '../../../lib/plugins/plugin.js'
+import lodash from 'lodash'
+import { Common, Data } from '../components/index.js'
+import Theme from './帮助/theme.js'
 
-export class cunyx_help extends plugin {
-  constructor () {
+export class xiaofei_help extends plugin {
+  constructor() {
     super({
-      name:"寸幼萱帮助",
-      dsc:"获取寸幼萱帮助",
-      event:"message",
-      priority:1,/*优先级*/
-      rule:[
-        {reg:"^#?(c|C|寸|村)(u|U)?(n|N)?(y|Y|幼|优)(x|X|萱|选)(插件)?使用说明",fnc:"help"},
-        {reg:"^#?(c|C|寸|村)(u|U)?(n|N)?(y|Y|幼|优)(x|X|萱|选)帮助",fnc:"help_index"},
-        {reg:"^#?((c|C|寸|村)(u|U)?(n|N)?(y|Y|幼|优)(x|X|萱|选))?(淫|银|阴)(趴|扒|啪|爬)帮助",fnc:"help_impact"},
-        {reg:"^#?((c|C|寸|村)(u|U)?(n|N)?(y|Y|幼|优)(x|X|萱|选))设置",fnc:"help_install"}
+      /** 功能名称 */
+      name: '插件_帮助',
+      /** 功能描述 */
+      dsc: '',
+      /** https://oicqjs.github.io/oicq/#events */
+      event: 'message',
+      /** 优先级，数字越小等级越高 */
+      priority: 2000,
+      rule: [
+        {
+          /** 命令正则匹配 */
+          reg: '^#?(cunyx|寸幼萱)(插件)?帮助$',
+          /** 执行方法 */
+          fnc: 'message'
+        }
       ]
     });
   }
-  async help (e) {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    const page = await browser.newPage();
-    await page.goto('https://gitee.com/cunyx/cunyx-plugin/blob/master/README.md');
-    await page.screenshot({
-      path: process.cwd()+`/plugins/cunyx-plugin/data/README.png`,
-      fullPage: true
-    });
-    await browser.close();
-    await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/data/README.png`)]);
+
+  async message() {
+    return await help(this.e);
   }
-  async help_index (e) {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    const page = await browser.newPage();
-    await page.goto('https://gitee.com/cunyx/cunyx-plugin/blob/master/HELP/INDEX.md');
-    await page.screenshot({
-      path: process.cwd()+`/plugins/cunyx-plugin/HELP/INDEX.png`,
-      fullPage: true
-    });
-    await browser.close();
-    await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/HELP/INDEX.png`)]);
-  }
-  async help_impact (e) {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    const page = await browser.newPage();
-    await page.goto('https://gitee.com/cunyx/cunyx-plugin/blob/master/HELP/IMPACT.md');
-    await page.screenshot({
-      path: process.cwd()+`/plugins/cunyx-plugin/HELP/IMPACT.png`,
-      fullPage: true
-    });
-    await browser.close();
-    await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/HELP/IMPACT.png`)]);
-  }
-  async help_install (e) {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    const page = await browser.newPage();
-    await page.goto('https://gitee.com/cunyx/cunyx-plugin/blob/master/HELP/INSTALL.md');
-    await page.screenshot({
-      path: process.cwd()+`/plugins/cunyx-plugin/HELP/INSTALL.png`,
-      fullPage: true
-    });
-    await browser.close();
-    await e.reply([segment.image(process.cwd()+`/plugins/cunyx-plugin/HELP/INSTALL.png`)]);
-  }
+
+}
+
+async function help(e) {
+  let custom = {}
+  let help = {}
+
+  let { diyCfg, sysCfg } = await Data.importCfg('help')
+
+  custom = help
+
+  let helpConfig = lodash.defaults(diyCfg.helpCfg || {}, custom.helpCfg, sysCfg.helpCfg)
+  let helpList = diyCfg.helpList || custom.helpList || sysCfg.helpList
+  let helpGroup = []
+
+  lodash.forEach(helpList, (group) => {
+    if (group.auth && group.auth === 'master' && !e.isMaster) {
+      return true
+    }
+
+    lodash.forEach(group.list, (help) => {
+      let icon = help.icon * 1
+      if (!icon) {
+        help.css = 'display:none'
+      } else {
+        let x = (icon - 1) % 10
+        let y = (icon - x - 1) / 10
+        help.css = `background-position:-${x * 50}px -${y * 50}px`
+      }
+    })
+
+    helpGroup.push(group)
+  })
+  let themeData = await Theme.getThemeData(diyCfg.helpCfg || {}, sysCfg.helpCfg || {})
+
+  return await Common.render('help/index', {
+    helpCfg: helpConfig,
+    helpGroup,
+    ...themeData,
+    element: 'default'
+  }, { e, scale: 1 })
 }
