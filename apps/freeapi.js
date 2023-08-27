@@ -16,7 +16,7 @@ export class cunyx_freeapi extends plugin {
   async dog (e) {GetApi("dog")}
   async soul (e) {GetApi("soul")}
 }
-async function GetApi (name) {
+async function GetApi (e,name) {
   try {
     let json = await fetch(`http://api.cunyx.cn/Yunzai-Bot/freeapi.php?name=${name}&uin=${Bot.uin}&qid=${e.user_id}`);
     json = await json.json();
