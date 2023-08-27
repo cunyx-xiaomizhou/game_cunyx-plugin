@@ -13,8 +13,8 @@ export class cunyx_freeapi extends plugin {
       ]
     });
   }
-  async dog (e) {GetApi("dog")}
-  async soul (e) {GetApi("soul")}
+  async dog (e) {GetApi(e,"dog")}
+  async soul (e) {GetApi(e,"soul")}
 }
 async function GetApi (e,name) {
   try {
