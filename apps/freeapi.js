@@ -9,12 +9,16 @@ export class cunyx_freeapi extends plugin {
       priority:1,/*优先级*/
       rule:[
         {reg:"^#?舔狗日记$",fnc:"dog"},
-        {reg:"^#?(来(一|亿)碗|心(里|灵))?毒鸡汤$",fnc:"soul"}
+        {reg:"^#?(来(一|亿)碗|心(里|灵))?毒鸡汤$",fnc:"soul"},
+        {reg:"^#?(随机)?(名人)?名言",fnc:"mingyan"},
+        {reg:"^#?(随机)?(古)?诗词",fnc:"shici"}
       ]
     });
   }
   async dog (e) {GetApi(e,"dog")}
   async soul (e) {GetApi(e,"soul")}
+  async mingyan (e) {GetApi(e,"mingyan")}
+  async shici (e) {GetApi(e,"shici")}
 }
 async function GetApi (e,name) {
   try {
