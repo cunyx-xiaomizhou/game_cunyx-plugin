@@ -8,10 +8,10 @@ export class cunyx_freeapi extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?舔狗日记$",fnc:"dog"},
+        {reg:"^#?舔狗日记",fnc:"dog"},
         {reg:"^#?(来(一|亿)碗|心(里|灵))?毒鸡汤$",fnc:"soul"},
-        {reg:"^#?(随机)?(名人)?名言",fnc:"mingyan"},
-        {reg:"^#?(随机)?(古)?诗词",fnc:"shici"}
+        {reg:"^#?(随机)?(名人)?名言$",fnc:"mingyan"},
+        {reg:"^#?(随机)?(古)?诗词$",fnc:"shici"}
       ]
     });
   }
