@@ -3,7 +3,7 @@ import lodash from 'lodash'
 import { Common, Data } from '../components/index.js'
 import Theme from './帮助/theme.js'
 
-export class xiaofei_help extends plugin {
+export class impart_cunyx_help extends plugin {
   constructor() {
     super({
       /** 功能名称 */
@@ -17,7 +17,7 @@ export class xiaofei_help extends plugin {
       rule: [
         {
           /** 命令正则匹配 */
-          reg: '^#?(cunyx|寸幼萱)(插件)?帮助$',
+          reg: '^#?(cunyx|寸幼萱)(淫|银|阴)(趴|扒|啪|爬)(插件)?帮助$',
           /** 执行方法 */
           fnc: 'message'
         }
