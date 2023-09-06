@@ -1,7 +1,7 @@
 import fs from 'fs'
 import _ from 'lodash'
 import cfg from '../../../lib/config/config.js'
-const Plugin_Path = `${process.cwd()}/plugins/cunyx-plugin`
+const Plugin_Path = `${process.cwd()}/plugins/impart_cunyx-plugin`
 const README_path = `${Plugin_Path}/README.md`
 const CHANGELOG_path = `${Plugin_Path}/CHANGELOG.md`
 
