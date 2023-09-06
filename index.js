@@ -2,9 +2,9 @@ import fs from 'node:fs';
 import path from 'path';
 import chalk from 'chalk';
 logger.info(logger.red('~~~~~~~~~~~~~~~~~~~~'));
-logger.info('开始寸幼萱插件初始化');
-const folder1 = process.cwd()+'/plugins/cunyx-plugin/config';
-const folder2 = process.cwd()+'/plugins/cunyx-plugin/def_config';
+logger.info('开始寸幼萱淫趴初始化');
+const folder1 = process.cwd()+'/plugins/impart_cunyx-plugin/config';
+const folder2 = process.cwd()+'/plugins/impart_cunyx-plugin/def_config';
 
 function getAllFiles(dirPath, files) {
   const fileList = fs.readdirSync(dirPath);
@@ -37,7 +37,7 @@ function compareFolders(folder1, folder2) {
   });
 }
 compareFolders(folder1, folder2);
-const files = fs.readdirSync('./plugins/cunyx-plugin/apps').filter(file => file.endsWith('.js'));
+const files = fs.readdirSync('./plugins/impart_cunyx-plugin/apps').filter(file => file.endsWith('.js'));
 let ret = [];
 files.forEach((file) => {
   ret.push(import (`./apps/${file}`));
@@ -53,7 +53,7 @@ for (let i in files) {
   }
   apps[name] = ret[i].value[Object.keys(ret[i].value)[0]];
 }
-logger.info('寸幼萱插件初始化完成');
+logger.info('寸幼萱插淫趴件初始化完成');
 logger.info(`~\t${chalk.green('寸幼萱交流群')}${'  '}${chalk.underline('786034611')}\t~`);
 logger.info(logger.red('~~~~~~~~~~~~~~~~~~~~'));
 export { apps };
