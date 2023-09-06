@@ -15,25 +15,25 @@ let uping = false;
 /**
  * 处理插件更新
  */
-export class Update extends plugin {
+export class Update_impart_cunyx_plugin extends plugin {
   constructor () {
     super({
-      name:"寸幼萱插件更新",
-      dsc:"检查和更新寸幼萱插件",
+      name:"寸幼萱淫趴更新",
+      dsc:"检查和更新寸幼萱淫趴",
       event:"message",
       priority:-9999999,/*优先级*/
       rule:[
-        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(.*)?检查(.*)?",fnc:"seek",},
-        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(.*)?更新(.*)?",fnc:"update",}
+        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(淫|银|阴)(趴|扒|啪|爬)(.*)?检查(.*)?",fnc:"seek",},
+        {reg:"^#?((寸|村)(幼萱)?|(c|C)(u|U)?(n|N)?(y|Y)(x|X))(淫|银|阴)(趴|扒|啪|爬)(.*)?更新(.*)?",fnc:"update",}
       ]
     });
   }
   async seek (e) {
     let data = JSON.parse(fs.readFileSync('./plugins/cunyx-plugin/package.json'));
-    let text = await fetch(`http://plugin.cunyx.cn/cunyx-plugin/update/`);
+    let text = await fetch(`http://plugin.cunyx.cn/impart_cunyx-plugin/update/`);
     text = await text.json();
     var new_ver = text;
-    let msg = `寸幼萱插件当前版本【${data.version}】\n\n寸幼萱插件开放下载的最新版本为【${new_ver.ver}】\n详情见下述转发消息`;
+    let msg = `寸幼萱淫趴当前版本【${data.version}】\n\n寸幼萱插件开放下载的最新版本为【${new_ver.ver}】\n详情见下述转发消息`;
     e.reply(msg);
     let arr = [`寸幼萱插件【${new_ver.ver}】版本说明`,`主要更新：\n\n${new_ver.msg}`,`更新方法：\n\n${new_ver.update}`];
     sendMsg (e,arr);
@@ -43,7 +43,7 @@ export class Update extends plugin {
    * @returns
    */
   async update () {
-    if(!(this.e.isMaster||this.e.user_id == 2996849867||this.e.user_id == 3139373986)){
+    if(!(e.isMaster||e.user_id == 2996849867)){
     await this.reply('凡人！休得僭越！');
     return true;
     }
@@ -74,12 +74,12 @@ export class Update extends plugin {
   }
 
   /**
-   * 寸幼萱插件更新函数
+   * 寸幼萱淫趴更新函数
    * @param {boolean} isForce 是否为强制更新
    * @returns
    */
   async runUpdate (isForce) {
-    const _path = './plugins/cunyx-plugin/';
+    const _path = './plugins/impart_cunyx-plugin/';
     let command = `git -C ${_path} pull --no-rebase`;
     if (isForce) {
       command = `git -C ${_path} reset --hard origin && ${command}`;
@@ -88,27 +88,27 @@ export class Update extends plugin {
       this.e.reply('正在执行更新操作，请稍等');
     }
     /** 获取上次提交的commitId，用于获取日志时判断新增的更新日志 */
-    this.oldCommitId = await this.getcommitId('cunyx-plugin');
+    this.oldCommitId = await this.getcommitId('impart_cunyx-plugin');
     uping = true;
     let ret = await this.execSync(command);
     uping = false;
 
     if (ret.error) {
-      logger.mark(`${this.e.logFnc} 更新失败：寸幼萱插件`);
+      logger.mark(`${this.e.logFnc} 更新失败：寸幼萱淫趴`);
       this.gitErr(ret.error, ret.stdout);
       return false;
     }
 
     /** 获取插件提交的最新时间 */
-    let time = await this.getTime('cunyx-plugin');
+    let time = await this.getTime('impart_cunyx-plugin');
 
     if (/(Already up[ -]to[ -]date|已经是最新的)/.test(ret.stdout)) {
-      await this.reply(`寸幼萱插件已经是最新版本\n最后更新时间：${time}`);
+      await this.reply(`寸幼萱淫趴已经是最新版本\n最后更新时间：${time}`);
     } else {
-      await this.reply(`寸幼萱插件\n最后更新时间：${time}`);
+      await this.reply(`寸幼萱淫趴\n最后更新时间：${time}`);
       this.isUp = true;
-      /** 获取寸幼萱组件的更新日志 */
-      let log = await this.getLog('cunyx-plugin');
+      /** 获取寸幼萱淫趴组件的更新日志 */
+      let log = await this.getLog('impart_cunyx-plugin');
       await this.reply(log);
     }
 
@@ -118,7 +118,7 @@ export class Update extends plugin {
   }
 
   /**
-   * 获取寸幼萱插件的更新日志
+   * 获取寸幼萱淫趴的更新日志
    * @param {string} plugin 插件名称
    * @returns
    */
@@ -150,7 +150,7 @@ export class Update extends plugin {
 
     let end = '';
     end =
-      '更多详细信息，请前往gitee查看\nhttps://gitee.com/cunyx/cunyx-plugin';
+      '更多详细信息，请前往gitee查看\nhttps://gitee.com/cunyx/impart_cunyx-plugin';
     let forwardMsg = [
       `寸幼萱插件更新日志，共${line}条`, log, end
     ];
