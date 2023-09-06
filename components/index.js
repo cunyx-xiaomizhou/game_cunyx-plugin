@@ -1,5 +1,5 @@
 const Path = process.cwd();
-const Plugin_Name = 'cunyx-plugin'
+const Plugin_Name = 'impart_cunyx-plugin'
 const Plugin_Path = `${Path}/plugins/${Plugin_Name}`;
 import Version from './Version.js'
 import Data from './Data.js'
