@@ -3,7 +3,7 @@ import lodash from 'lodash'
 import cfgData from './cfg-lib/cfg-data.js'
 
 const _path = process.cwd()
-const _cfgPath = `${_path}/plugins/cunyx-plugin/components/`
+const _cfgPath = `${_path}/plugins/impart_cunyx-plugin/components/`
 let cfg = {}
 
 try {
