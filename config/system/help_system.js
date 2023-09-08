@@ -31,13 +31,13 @@ export const helpList = [{
     icon: 1,
     title: '#淫趴绑定[本群|群号]' ,
     desc: '开发中'
-  }],
+  }]},{
   group: '私聊功能',
   list: [{
     icon: 3,
     title: '#淫趴绑定[群号]',
     desc: '开发中'
-  }],
+  }]},{
   group: '管理员可用功能',
   auth: 'master',
   list: [{
@@ -50,7 +50,7 @@ export const helpList = [{
     desc: '更新淫趴插件，获取新功能'
   }, {
     icon: 35,
-    title: '#数据迁移',
+    title: '#寸幼萱淫趴数据迁移',
     desc: '将寸幼萱插件内的数据迁移至淫趴插件<br/>请不要多次使用'
   }]
 }];
