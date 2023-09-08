@@ -6,7 +6,7 @@ import fs from 'node:fs'
 let cfgData = {
   async loadOldData () {
     const _path = process.cwd()
-    const _cfgPath = `${_path}/plugins/cunyx-plugin/components/`
+    const _cfgPath = `${_path}/plugins/impart_cunyx-plugin/components/`
     if (!fs.existsSync(_cfgPath + 'cfg.json')) {
       return false
     }
