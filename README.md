@@ -36,11 +36,11 @@ cd Yunzai-Bot
 2.  拉取项目
 ```bash
 # 使用Gitee拉取
-git clone  --depth=1 https://gitee.com/cunyx/impart_cunyx-plugin.git ./plugins/cunyx-plugin/
+git clone  --depth=1 https://gitee.com/cunyx/impart_cunyx-plugin.git ./plugins/impart_cunyx-plugin/
 ```
 ```bash
 # 使用Github拉取 (更新可能不及时)
-git clone  --depth=1 https://github.com/cunyx-xiaomizhou/impart_cunyx-plugin.git ./plugins/cunyx-plugin/
+git clone  --depth=1 https://github.com/cunyx-xiaomizhou/impart_cunyx-plugin.git ./plugins/impart_cunyx-plugin/
 ```
 
 3.  重启机器人，生效控制面板
