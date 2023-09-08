@@ -7,8 +7,8 @@
 import fs from 'fs';
 let data = JSON.parse(fs.readFileSync('./package.json'));
 export const helpCfg = {
-  title: '寸幼萱帮助',
-  subTitle: data.name + ' && cunyx-plugin',
+  title: '寸幼萱淫趴帮助',
+  subTitle: data.name + ' && impart_cunyx-plugin',
   columnCount: 3,
   colWidth: 265,
   theme: 'all',
