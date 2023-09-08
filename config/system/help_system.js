@@ -26,6 +26,18 @@ export const helpCfg = {
 }
 
 export const helpList = [{
+  group: '群聊功能',
+  list: [{
+    icon: 1,
+    title: '#淫趴绑定[本群|群号]' ,
+    desc: '开发中'
+  }],
+  group: '私聊功能',
+  list: [{
+    icon: 3,
+    title: '#淫趴绑定[群号]',
+    desc: '开发中'
+  }],
   group: '管理员可用功能',
   auth: 'master',
   list: [{
