@@ -4,12 +4,14 @@
 #  {cd}  --  距离下次导管所需时长
 #文件参数说明：
 #  def  --  默认数据
+#  cond -- 指定群聊是否开启本功能(选填ture或false)
 #  cd  -- 导管子所需冷却，单位秒
 #  add_low  --  牛牛增长最低长度
 #  add_low  --  牛牛增长最高长度
 #  win_language  --  导管成功发送的消息，支持函数{add}
 #  cd_language  --  导管失败发送的消息，支持函数{cd}
 def:
+  cond: true
   cd: 150
   add_low: 1
   add_hight: 3
@@ -23,6 +25,7 @@ def:
 #每个都会有两个实例，请按照实例的格式填写，否则会出错
 #上方是默认数据，要想自定义请按照以下格式
 786034611:
+  cond: false
   cd: 120
   add_low: 2
   add_hight: 3
