@@ -1,1 +1,6 @@
-//淫趴初始化函数调用文件
+import fs from 'fs';
+import YAML from 'yaml';
+export function start (e) {
+  fs.writeFileSync();
+  e.reply("nalanala");
+}
