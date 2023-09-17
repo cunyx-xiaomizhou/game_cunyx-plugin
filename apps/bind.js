@@ -1,4 +1,4 @@
-
+import { bind } from './../model/bind.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
 
