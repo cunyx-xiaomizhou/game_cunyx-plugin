@@ -30,7 +30,7 @@ export class cunyx_impart_bind extends plugin {
       } else {
         qun_id = e.msg.replace(/(淫|银|阴)(趴|扒|啪|爬)绑定|#/g,"");
       }
-      e.reply("【测试】" + qun_id);
+      bind(e,e.user_id,e.group_id);
     } else if (GetYamlValue(e,"bind","cond") == true) {
       e.reply("【测试】未在白名单")
     }
