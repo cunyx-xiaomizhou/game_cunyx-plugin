@@ -19,7 +19,7 @@ export class cunyx_impart_bind extends plugin {
   }
   async bind (e) {
     //优先判断用户是否在白名单内
-    if (GetYamlValue(e,"bind","white").includes(e.user_id)) {
+    if (GetYamlValue(e,"bind","whiteQQ").includes(e.user_id)) {
       //用户处于白名单
       if (e.msg.includes("本")||e.msg.includes("此")) {
         if (!e.group_id) {
