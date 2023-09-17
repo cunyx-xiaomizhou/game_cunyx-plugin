@@ -1,4 +1,4 @@
-import random from 'random.js';
+import { random } from 'random.js';
 export function RandomArrayValueIndex (array) {
   //计算索引
   let randomIndex = random(0,array.length - 1);
