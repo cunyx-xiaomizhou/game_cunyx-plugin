@@ -4,7 +4,7 @@ export function bind (e,qq_id,qun_id) {
   let Json = JSON.parse(JsonText);
   Json[qq_id] = qun_id;
   let NewJson = JSON.stringify(Json);
-  fs.writeFileSync('./plugins/impart_cunyx-plugin/data/bind.json', NewJson, function (err) {
+  fs.writeFile('./plugins/impart_cunyx-plugin/data/bind.json', NewJson, (err) => {
     if (err) throw err;
     e.reply("绑定成功！",true);
   });
