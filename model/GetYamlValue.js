@@ -6,7 +6,12 @@ export function GetYamlValue (e,FileName,Name) {
     let value = data[e.group_id][Name];
     return value;
   } catch (err) {
-    let value = data.def[Name];
-    return value;
+    try {
+      let value = data.def[Name];
+      return value;
+    } catch (err) {
+      let value = data[Name];
+      return value;
+    }
   }
 }
