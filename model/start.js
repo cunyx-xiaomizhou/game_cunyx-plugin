@@ -1,5 +1,6 @@
 import fs from 'fs';
 import YAML from 'yaml';
+import { random } from 'random.js';
 export function start (e) {
   let system_start = YAML.parse(fs.readFileSync('./plugins/impart_cunyx-plugin/config/impart_start.yaml','utf-8'));
   try {
