@@ -22,13 +22,15 @@ export class cunyx_impart_bind extends plugin {
     if (GetYamlValue(e,"bind","white").includes(e.user_id)) {
       //用户处于白名单
       if (e.msg.includes("本")||e.msg.includes("此")) {
-        let qun_id = e.group_id;
-        qun_id = qun_id;
+        if (!e.group_id) {
+          e.reply("私聊仅支持使用群号绑定");
+          return true;
+        }
+        qun_id = e.group_id;
       } else {
-        let qun_id = e.mag.replace(/(淫|银|阴)(趴|扒|啪|爬)绑定|#/g,"");
-        qun_id = qun_id;
+        qun_id = e.msg.replace(/(淫|银|阴)(趴|扒|啪|爬)绑定|#/g,"");
       }
-      e.reply("【测试】"+qun_id);
+      e.reply("【测试】" + qun_id);
     } else if (GetYamlValue(e,"bind","cond") == true) {
       e.reply("【测试】未在白名单")
     }
