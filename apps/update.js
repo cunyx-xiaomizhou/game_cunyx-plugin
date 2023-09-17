@@ -84,9 +84,9 @@ export class Update_impart_cunyx_plugin extends plugin {
    */
   async runUpdate (isForce) {
     const _path = './plugins/impart_cunyx-plugin/';
-    let command = `git ${_path} pull --no-rebase`;
+    let command = `git -C ${_path} pull --no-rebase`;
     if (isForce) {
-      command = `git ${_path} reset --hard origin && ${command}`;
+      command = `git -C ${_path} reset --hard origin && ${command}`;
       this.e.reply('正在执行强制更新操作，请稍等');
     } else {
       this.e.reply('正在执行更新操作，请稍等');
@@ -156,7 +156,7 @@ export class Update_impart_cunyx_plugin extends plugin {
     end =
       '更多详细信息，请前往gitee查看\nhttps://gitee.com/cunyx/impart_cunyx-plugin';
     let forwardMsg = [
-      `寸幼萱淫趴插件更新日志，共${line}条`, log, end
+      `寸幼萱插件更新日志，共${line}条`, log, end
     ];
     log = await common.getforwardMsg(this.e, forwardMsg, {
       shouldSendMsg: false
@@ -171,7 +171,7 @@ export class Update_impart_cunyx_plugin extends plugin {
    * @returns
    */
   async getcommitId (plugin = '') {
-    let cm = `git ./plugins/${plugin}/ rev-parse --short HEAD`
+    let cm = `git -C ./plugins/${plugin}/ rev-parse --short HEAD`
 
     let commitId = await execSync(cm, { encoding: 'utf-8' })
     commitId = _.trim(commitId)
