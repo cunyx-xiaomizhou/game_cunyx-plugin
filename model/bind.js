@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { GetYamlValue } from 'GetYamlValue.js';
-import { RandomArrayValueIndex } from 'RandomArrayValueIndex.js';
+import { GetYamlValue } from './GetYamlValue.js';
+import { RandomArrayValueIndex } from './RandomArrayValueIndex.js';
 export function bind (e,qq_id,qun_id) {
   let JsonText = fs.readFileSync('./plugins/impart_cunyx-plugin/data/bind.json');
   let Json = JSON.parse(JsonText);
