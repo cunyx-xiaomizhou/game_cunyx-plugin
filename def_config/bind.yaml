@@ -4,20 +4,20 @@
 #  {qq_id} -- 绑定群聊的操作人员
 #文件参数说明：
 #  cond -- 是否开启绑定功能(选填false或true)
-#  allow -- 允许xxx群聊可以被绑定
-#  refuse -- 指定群聊不能被绑定
+#  allow -- 允许xxx群聊可以被绑定，无论是否开关绑定功能
+#  refuse -- 拒绝xxx群聊不能被绑定，无论是否开关绑定功能
 #  whiteQQ -- 允许QQ号为xxx可以绑定群聊，无视群聊状态
 #  blackQQ -- 指定QQ号不能绑定群聊，任何群聊都不可以
 #  language -- 绑定成功回复的文案，支持变量{qun_id}、{qq_id}
+#请不要留空下方任何一个参数，乱填也行，就是千万不能留空！
 cond: true
 language:
   - "QQ号{qq_id}绑定的群聊已更改为{qun_id}"
 allow:
-
+  - 786034611
 refuse:
   - 123456789
-
 whiteQQ:
-
+  - 2996849867
 blackQQ:
   - 123456789
