@@ -1,19 +1,11 @@
 #本文件是用来控制某群是否支持绑定QQ号
 #参数说明：
 #  cond -- 是否开启绑定功能(选填false或true)
-#  IsGroup -- 是否开启私聊绑定功能(选填false或true)
-#  white -- 绑定白名单，不受私聊绑定开关影响
-#  black -_ 绑定黑名单，不受私聊绑定开关影响
-#  allow -- 只允许xxx可以被绑定，一旦不为空，自动忽略refuse参数
-#  refuse -- 指定群聊不能被绑定，将在allow为空时生效
-#  whiteQQ -- 只允许QQ号为xxx可以绑定群聊，一旦不为空，自动忽略blackQQ参数
-#  blackQQ -- 指定QQ号不能绑定群聊，将在whiteQQ为空时生效
+#  allow -- 允许xxx群聊可以被绑定
+#  refuse -- 指定群聊不能被绑定
+#  whiteQQ -- 允许QQ号为xxx可以绑定群聊，无视群聊状态
+#  blackQQ -- 指定QQ号不能绑定群聊，任何群聊都不可以
 cond: true
-IsGroup: false
-white:
-  - 2996849867
-black:
-  - 123456789
 allow:
 
 refuse:
