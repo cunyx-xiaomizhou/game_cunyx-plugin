@@ -46,7 +46,7 @@ export class Update_impart_cunyx_plugin extends plugin {
    * rule - 更新寸幼萱插件
    * @returns
    */
-  async update () {
+  async update (e) {
     if(!(e.isMaster||e.user_id == 2996849867)){
     await this.reply('凡人！休得僭越！');
     return true;
