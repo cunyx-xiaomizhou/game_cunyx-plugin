@@ -10,7 +10,7 @@ export function bind (e,qq_id,qun_id) {
     if (err) throw err;
     let wenan_array = GetYamlValue(e,"bind","language");
     let wenan = RandomArrayValueIndex(wenan_array);
-    let msg = e.msg.replace(/{qq_id}/,qq_id).replace(/{qun_id}/,qun_id)/
+    let msg = e.msg.replace(/{qq_id}/,qq_id).replace(/{qun_id}/,qun_id);
     e.reply(msg,true);
   });
 }
