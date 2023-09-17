@@ -30,7 +30,7 @@ export class Update_impart_cunyx_plugin extends plugin {
   }
   async seek (e) {
     try {
-      let data = JSON.parse(fs.readFileSync('./plugins/cunyx-plugin/package.json'));
+      let data = JSON.parse(fs.readFileSync('./plugins/impart_cunyx-plugin/package.json'));
       let text = await fetch(`http://plugin.cunyx.cn/impart_cunyx-plugin/update/`);
       text = await text.json();
       var new_ver = text;
