@@ -2,6 +2,7 @@
 #文件变量说明：
 #  {qun_id} -- 绑定群聊的QQ群号
 #  {qq_id} -- 绑定群聊的操作人员
+#  {BindQunId} -- 被绑定群聊的群号
 #文件参数说明：
 #  cond -- 是否开启绑定功能(选填false或true)
 #  allow -- 允许xxx群聊可以被绑定，无论是否开关绑定功能
@@ -13,6 +14,7 @@
 #  BlackUserBind -- 黑名单用户绑定返回信息
 #  BlackGroupBind -- 群聊在黑名单内返回的消息
 #  BindClose  -- 没有开启绑定功能的提示信息
+#  Seek -- 查看绑定提示的正常信息，支持变量{BindQunId}
 #  NoneBind -- 没有绑定返回的信息
 #请不要留空下方任何一个参数，乱填也行，就是千万不能留空！
 cond: true
@@ -37,5 +39,7 @@ BlackGroupBind:
   - "此群聊在黑名单内，不支持被绑定"
 BindClose:
   - "未开启绑定功能"
+Seek:
+  - "你绑定的群聊是：{BindQunId}！"
 NoneBind:
   - "你还未绑定过群聊"
