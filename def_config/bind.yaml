@@ -9,6 +9,11 @@
 #  whiteQQ -- 允许QQ号为xxx可以绑定群聊，无视群聊状态
 #  blackQQ -- 指定QQ号不能绑定群聊，任何群聊都不可以
 #  language -- 绑定成功回复的文案，支持变量{qun_id}、{qq_id}
+#  FriendBindThis -- 私聊使用“本群”，“此群”类词语绑定返回的信息
+#  BlackUserBind -- 黑名单用户绑定返回信息
+#  BlackGroupBind -- 群聊在黑名单内返回的消息
+#  BindClose  -- 没有开启绑定功能的提示信息
+#  NoneBind -- 没有绑定返回的信息
 #请不要留空下方任何一个参数，乱填也行，就是千万不能留空！
 cond: true
 language:
@@ -24,3 +29,13 @@ whiteQQ:
   - 2996849867
 blackQQ:
   - 123456789
+FriendBindThis:
+  - "私聊仅支持使用群号绑定群聊"
+BlackUserBind:
+  - "你在黑名单里，不能绑定群聊"
+BlackGroupBind:
+  - "此群聊在黑名单内，不支持被绑定"
+BindClose:
+  - "未开启绑定功能"
+NoneBind:
+  - "你还未绑定过群聊"
