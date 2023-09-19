@@ -23,6 +23,6 @@ export class impart_cunyx_plugin_restart extends plugin {
     for (let i=0;i<long;i++) {
       Msg = Msg + array[i] + "\n";
     }
-    e.reply("可供重置的文件如下：\n\n"+msg+"\n重置某面板请发送【#寸幼萱淫趴重载配置文件。+ 上方的文件名】进行重置，将在重启后生效",true);
+    e.reply("可供重置的文件如下：\n\n"+Msg+"\n重置某面板请发送【#寸幼萱淫趴重载配置文件。+ 上方的文件名】进行重置，将在重启后生效",true);
   }
 }
