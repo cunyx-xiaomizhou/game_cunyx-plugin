@@ -16,6 +16,7 @@ export class impart_cunyx_plugin_restart extends plugin {
   async seekconfig (e) {
     if (!e.isMaster) {
       e.reply("只有我的主人可以查看哦~",true);
+      return;
     }
     let array = GetYamlFileName('./plugins/impart_cunyx-plugin/config');
     let long = array.length;
@@ -26,6 +27,10 @@ export class impart_cunyx_plugin_restart extends plugin {
     e.reply("可供重置的文件如下：\n\n"+Msg+"\n重置某面板请发送【#寸幼萱淫趴重载配置文件。+ 上方的文件名】进行重置，将在重启后生效",true);
   }
   async rm (e) {
+    if (!e.isMaster) {
+      e.reply("只有我的主人可以重置哦~",true);
+      return;
+    }
     let File = e.msg.replace(/((c|C|寸|村)(u|U)?(n|N)?(y|Y|幼|优)(x|X|萱|选))?((淫|银|阴)(趴|扒|啪|爬))?重(置|拉|载)控制(台|面板|文件)/,"");
     try {
       fs.unlink('./plugins/import_cunyx-plugin/config/'+File+".yaml");
