@@ -19,7 +19,7 @@ export class impart_cunyx_plugin_restart extends plugin {
     }
     let array = GetYamlFileName('./plugins/impart_cunyx-plugin/config');
     let long = array.length;
-    for (i=0;i<long;i++) {
+    for (let i=0;i<long;i++) {
       let msg = array[i]+"\n";
       let Msg = Msg + msg;
     }
