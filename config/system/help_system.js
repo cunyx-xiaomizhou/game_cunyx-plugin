@@ -26,16 +26,16 @@ export const helpCfg = {
 }
 
 export const helpList = [{
-  group: '群聊功能',
+  group: '用户系统命令',
   list: [{
     icon: 1,
     title: '#淫趴绑定[本群|群号]' ,
-    desc: '开发中'
+    desc: '绑定群聊，让你私聊也可以色色'
   }]},{
-  group: '私聊功能',
+  group: '淫趴游戏功能',
   list: [{
     icon: 3,
-    title: '#淫趴绑定[群号]',
+    title: '#导管子',
     desc: '开发中'
   }]},{
   group: '管理员可用功能',
