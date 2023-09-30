@@ -22,6 +22,6 @@ export function bind (e,qq_id,qun_id) {
       e.reply(msg,true);
     });
   } catch (err) {
-    start(e,"IsBind","data");
+    start(e,"IsBind","bind");
   }
 }
