@@ -7,8 +7,12 @@ export function GetBindQun (e) {
   } else {
     dir = "all";
   }
-  let TextJson = fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json');
-  let Json = JSON.parse(TextJson);
-  let qun = Json[e.user_id];
-  return qun;
+  try {
+    let TextJson = fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json');
+    let Json = JSON.parse(TextJson);
+    let qun = Json[e.user_id];
+    return qun;
+  } catch (err) {
+    return null;
+  }
 }

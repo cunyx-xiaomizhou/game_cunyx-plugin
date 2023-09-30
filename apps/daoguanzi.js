@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { start } from './../model/start.js';
+import { GetBindQun } from './../model/GetBindQun.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
 import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
@@ -17,8 +18,12 @@ export class CunyxImpart_daoguanzi extends plugin {
   }
   async daoguanzi (e) {
     if (!e.group_id) {
-      //获取绑定的群号再判断
-      return;
+      let qun_id = GetBindQun(e);
+      if (qun_id==null) {
+        let Msg = GetYamlArrayRandomValue(e,'daoguanzi','NotBind');
+        e.reply(Msg,true);
+        return false;
+      }
     } else {
       qun_id = e.user_id;
     }
