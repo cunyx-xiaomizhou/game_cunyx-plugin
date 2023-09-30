@@ -1,6 +1,9 @@
+import fs from 'fs';
+import { start } from './../model/start.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
-export class plugin_name extends plugin {
+import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
+export class CunyxImpart_daoguanzi extends plugin {
   constructor () {
     super({
       name:"寸幼萱淫趴:导管子",
@@ -13,8 +16,16 @@ export class plugin_name extends plugin {
     });
   }
   async daoguanzi (e) {
-    /*
-      需要一个判断是否有数据的函数，等我，我先去写
-    */
+    if (!e.group_id) {
+      //获取绑定的群号再判断
+      return;
+    } else {
+      qun_id = e.user_id;
+    }
+    start(e,IsPublic,qun_id);
+    if (GetYamlValue(e,"daoguanzi","cond")==false) {
+      e.reply("本群淫趴已被关闭，快去叫我的主人开启吧！",true);
+      return false;
+    }
   }
 }
