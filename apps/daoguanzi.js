@@ -8,7 +8,7 @@ export class plugin_name extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?"+GetYamlValue(e,"daoguanzi","reg")+"$",fnc:"dgz"}
+        {reg:"^#?"+GetYamlValue("e","daoguanzi","reg")+"$",fnc:"dgz"}
       ]
     });
   }
