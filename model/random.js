@@ -1,4 +1,4 @@
-export function randomInteger(low, high) {
+export function random (low, high) {
   // 检查最小值是否等于最大值
   if (low === high) {
     return low;
@@ -10,5 +10,6 @@ export function randomInteger(low, high) {
   // 计算范围内的整数个数
   const count = high - low + 1;
   // 生成随机整数，并返回
-  return Math.floor(Math.random() * count) + low;
+  let Num = Math.floor(Math.random() * count) + low;
+  return Num;
 }
