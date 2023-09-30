@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { start } from './start.js';
 import { GetYamlValue } from './GetYamlValue.js';
-import { RandomArrayValueIndex } from './RandomArrayValueIndex.js';
+import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
 let dir;
 export function bind (e,qq_id,qun_id) {
   if (GetYamlValue(e,"data","IsBind")==true) {
@@ -16,8 +16,7 @@ export function bind (e,qq_id,qun_id) {
     let NewJson = JSON.stringify(Json);
     fs.writeFile('./plugins/impart_cunyx-plugin/data/' + dir + '/bind.json', NewJson, (err) => {
       if (err) throw err;
-      let wenan_array = GetYamlValue(e,"bind","language");
-      let wenan = RandomArrayValueIndex(wenan_array);
+      let wenan = GetYamlArrayRandomValue(e,"bind","language");
       let msg = wenan.replace(/{qq_id}/,qq_id).replace(/{qun_id}/,qun_id);
       e.reply(msg,true);
     });
