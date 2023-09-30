@@ -24,7 +24,8 @@ export function random (low,height) {
   //乘以差值并除以十(0~0.9n)
   let MaxNumber = MathFirstNumber * D / 10;
   //取上述数字的整数部分(采用四舍五入)(0~n-low+1)
-  let NormalNumber = (MaxNumber + 0.5).split(".")[0];
+  let Normalnumber = MaxNumber + 0.5;
+  let NormalNumber = Normalnumber.split(".")[0];
   //加上最小值使恢复正常
   let ResultNumber = NormalNumber + low;
   //如果大于最大值就减一
