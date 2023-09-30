@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { start } from './start.js';
 import { GetYamlValue } from './GetYamlValue.js';
 import { RandomArrayValueIndex } from './RandomArrayValueIndex.js';
 let dir;
