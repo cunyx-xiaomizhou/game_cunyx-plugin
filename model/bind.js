@@ -3,7 +3,7 @@ import { GetYamlValue } from './GetYamlValue.js';
 import { RandomArrayValueIndex } from './RandomArrayValueIndex.js';
 let dir;
 export function bind (e,qq_id,qun_id) {
-  if (GetYamlValue(e,"IsData","IsBind")==true) {
+  if (GetYamlValue(e,"data","IsBind")==true) {
     dir = "all";
   } else {
     dir = Bot.uin;
