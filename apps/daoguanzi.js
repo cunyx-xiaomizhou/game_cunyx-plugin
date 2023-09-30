@@ -29,7 +29,7 @@ export class CunyxImpart_daoguanzi extends plugin {
         qun_id = qun_id;
       }
     } else {
-      qun_id = qun_id;
+      qun_id = e.group_id;
     }
     //提取用户QQ号
     let reg = new RegExp(GetYamlValue(e,'daoguanzi','reg'),"g");
