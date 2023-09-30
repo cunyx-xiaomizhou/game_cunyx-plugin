@@ -26,9 +26,9 @@ export function random (low,height) {
   //取上述数字的整数部分(采用四舍五入)(0~n-low+1)
   let Normalnumber = MaxNumber + 0.5;
   let NormalNumberStr = Normalnumber + "";
-  let NormalNumber = NormalNumberStr.split(".");
+  let NormalNumber = NormalNumberStr.split(".")[0];
   //加上最小值使恢复正常
-  let ResultNumber = NormalNumber[0] + low;
+  let ResultNumber = NormalNumber + low;
   //如果大于最大值就减一
   if (ResultNumber > height) {
     return ResultNumber - 1;
