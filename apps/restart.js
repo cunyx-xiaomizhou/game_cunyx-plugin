@@ -1,3 +1,4 @@
+import fs from 'fs';
 import plugin from './../../../lib/plugins/plugin.js';
 import { GetYamlFileName } from './../model/GetYamlFileName.js';
 export class impart_cunyx_plugin_restart extends plugin {
