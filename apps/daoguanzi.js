@@ -2,7 +2,7 @@ import fs from 'fs';
 import { start } from './../model/start.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
-import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
+import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
 export class CunyxImpart_daoguanzi extends plugin {
   constructor () {
     super({
