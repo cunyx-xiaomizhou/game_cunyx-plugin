@@ -9,5 +9,7 @@
 #但由于技术限制，控制面板必须互通
 
 #参数说明：
-# IsBind -- 是否互通绑定数据
+#  IsBind  --  多个不同QQ号机器人是否互通绑定数据
+#  IsPublic  -- 多个不同QQ号机器人是否互通淫趴数据
 IsBind: false
+IsPublic: false
