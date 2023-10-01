@@ -35,13 +35,20 @@ export class CunyxImpart_daoguanzi extends plugin {
     let reg = new RegExp(GetYamlValue(e,'daoguanzi','reg'),"g");
     let BeQQ = e.msg.replace(reg,"").trim();
     if (/^\d{5,10}$/.test(BeQQ)==false) {
-      //QQ号格式不正确就从消息中强制提取
       BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
+      if (BeQQ=="") {
+        BeQQ = e.user_id;
+      }
     } else {
       BeQQ = BeQQ;
     }
-    if (GetYamlValue(e,'daoguanzi','cond')!==true) {
-      start(e,IsPublic,qun_id);
+    if (GetYamlValue(e,'daoguanzi','cond')==true) {
+      start(e,"IsPublic",qun_id);
+      if (e.group_id) {
+        //群聊导管子
+      } else {
+        //私聊导管子
+      }
     } else {
       //淫趴被关闭
     }
