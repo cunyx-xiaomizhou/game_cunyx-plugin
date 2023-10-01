@@ -1,11 +1,16 @@
 import YAML from 'yaml';
 import fs from 'fs';
-export function GetYamlValue (e,FileName,Name) {
+export function GetYamlValue (e,FileName,Name,qun_id) {
   Bot.logger.mark("[寸幼萱淫趴][model/GetYamlValue]开始调用获取控制面板值函数...");
   Bot.logger.mark("目标文件名："+FileName+'.yaml')
   let data = YAML.parse(fs.readFileSync('./plugins/impart_cunyx-plugin/config/' + FileName +'.yaml','utf-8'));
   try {
     Bot.logger.mark("尝试读取群单独配置....");
+    if (qun_id) {
+      let value = data[qun_id][Name];
+      Bot.logger.info("读取群配置成功，返回"+value);
+      return value;
+    }
     let value = data[e.group_id][Name];
     Bot.logger.info("读取群配置成功，返回"+value);
     return value;
