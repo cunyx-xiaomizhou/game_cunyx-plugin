@@ -10,14 +10,14 @@ export function GetYamlValue (e,FileName,Name) {
     Bot.logger.info("读取群配置成功，返回"+value);
     return value;
   } catch (err) {
-    Bot.logger.error("读取群配置失败，尝试读取默认配置");
+    Bot.logger.mark("读取群配置失败，尝试读取默认配置");
     try {
       let value = data.def[Name];
       Bot.logger.info("默认值读取成功，返回"+value);
       return value;
     } catch (err) {
       try {
-        Bot.logger.error("默认值读取失败，正在使用常规读取方式...");
+        Bot.logger.mark("默认值读取失败，正在使用常规读取方式...");
         let value = data[Name];
         Bot.logger.info("读取成功，返回"+value);
         return value;
