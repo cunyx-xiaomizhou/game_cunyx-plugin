@@ -8,6 +8,7 @@ import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
 let BeQQ;
 let qun_id;
 let Number;
+let RuleReg = GetYamlValue("e","daoguanzi","reg");
 export class CunyxImpart_daoguanzi extends plugin {
   constructor () {
     super({
@@ -16,7 +17,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?"+GetYamlValue("e","daoguanzi","reg")+"$",fnc:"dgz"}
+        {reg:"^#?"+RuleReg+"$",fnc:"dgz"}
       ]
     });
   }
@@ -45,7 +46,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       Number = Num + LooseNumber(random(0,999),3)/1000;
     }
     //提取用户QQ号
-    let reg = new RegExp(GetYamlValue(e,'daoguanzi','reg'),"g");
+    let reg = new RegExp(GetYamlValue(RuleReg,"g");
     let BeQQ = e.msg.replace(reg,"").trim();
     if (/^\d{5,10}$/.test(BeQQ)==false) {
       BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
