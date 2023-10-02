@@ -11,7 +11,7 @@ let BeQQ;
 let Json;
 let qun_id;
 let Number;
-let RegRule = new RegExp("^#?"+GetYamlValue("e","daoguanzi","reg")+"$","g");
+let RegRule = new RegExp("^#?("+GetYamlValue("e","daoguanzi","reg")+")$","g");
 export class CunyxImpart_daoguanzi extends plugin {
   constructor () {
     super({
