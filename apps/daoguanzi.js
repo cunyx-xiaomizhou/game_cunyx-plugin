@@ -41,7 +41,7 @@ export class CunyxImpart_daoguanzi extends plugin {
     }
     //获取控制面板需要的值
     let low = GetYamlValue(e,"daoguanzi","add_low",qun_id);
-    let heigh = GetYamlValue(e,"daoguanzi","add_heigh",qun_id);
+    let heigh = GetYamlValue(e,"daoguanzi","add_hight",qun_id);
     let cd = GetYamlValue(e,"daoguanzi","cd",qun_id);
     let Num = random(low,heigh);
     //计算增长值
