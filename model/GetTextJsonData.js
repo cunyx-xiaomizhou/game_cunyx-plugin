@@ -1,6 +1,6 @@
 export function GetTextJsonData (e,qun_id) {
   Bot.logger.mark("[寸幼萱淫趴][model/GetJsonData]开始获取数据文件...");
-  if (GetYamlValue(e,"data","IsBind")==true) {
+  if (GetYamlValue(e,"data","IsBind",qun_id)==true) {
     dir = "all";
   } else {
     dir = Bot.uin;
