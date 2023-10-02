@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { start } from './../model/start.js';
+import { random } from './../model/random.js';
 import { GetBindQun } from './../model/GetBindQun.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { LooseNumber } from './../model/LooseNumber.js';
