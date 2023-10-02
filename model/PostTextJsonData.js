@@ -9,9 +9,11 @@ export function PostTextJsonData (e,qun_id,TextJson) {
     dir = Bot.uin;
   }
   try {
-    fs.writeFile("./plugins/impart_cunyx-plugin/data/"+dir+"/"+qun_id+".json",JSON.stringify(TextJson));
-    Bot.logger.info("提交成功，返回true");
-    return true;
+    fs.writeFile("./plugins/impart_cunyx-plugin/data/"+dir+"/"+qun_id+".json",JSON.stringify(TextJson),(err) => {
+      if (err) throw err;
+      Bot.logger.info("提交成功，返回true");
+      return true;
+    });
   } catch (err) {
     Bot.logger.error("提交失败，错误如下：");
     Bot.logger.error(err);
