@@ -74,7 +74,8 @@ export class CunyxImpart_daoguanzi extends plugin {
        */
       e.reply("代码状态正常，具体内容正在更新");
     } else {
-      //淫趴被关闭
+      e.reply(GetYamlArrayRandomValue(e,"daoguanzi","close"),true);
+      return false;
     }
   }
 }
