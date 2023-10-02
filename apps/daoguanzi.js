@@ -11,7 +11,7 @@ let BeQQ;
 let Json;
 let qun_id;
 let Number;
-let RuleReg = GetYamlValue("e","daoguanzi","reg");
+let RegRule = new RegExp("^#?"+GetYamlValue("e","daoguanzi","reg")+"$","g");
 export class CunyxImpart_daoguanzi extends plugin {
   constructor () {
     super({
@@ -20,11 +20,12 @@ export class CunyxImpart_daoguanzi extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?"+RuleReg+"$",fnc:"dgz"}
+        {reg:RegRule,fnc:"dgz"}
       ]
     });
   }
   async daoguanzi (e) {
+    e.reply("阿巴巴巴",true);
     if (!e.group_id) {
       let qun_id = GetBindQun(e);
       if (qun_id==null) {
@@ -49,8 +50,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       Number = Num + LooseNumber(random(0,999),3)/1000;
     }
     //提取用户QQ号
-    let reg = new RegExp(GetYamlValue(RuleReg,"g"));
-    let BeQQ = e.msg.replace(reg,"").trim();
+    let BeQQ = e.msg.replace(RegRule,"").trim();
     if (/^\d{5,10}$/.test(BeQQ)==false) {
       BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
       if (BeQQ=="") {
