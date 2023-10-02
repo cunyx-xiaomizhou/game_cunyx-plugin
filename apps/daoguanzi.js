@@ -81,7 +81,12 @@ export class CunyxImpart_daoguanzi extends plugin {
         Json[BeQQ]["data"] = {};
         Json[BeQQ]["data"]["long"] = Number;
       }
-      Json[BeQQ]["cd"]["daoguanzi"] = Date.now() + (cd * 1000);
+      try {
+        Json[BeQQ]["cd"]["daoguanzi"] = Date.now() + (cd * 1000);
+      } catch (err) {
+        Json[BeQQ]["cd"] = {};
+        Json[BeQQ]["cd"]["daoguanzi"] = Date.now() + (cd * 1000);
+      }
       let PostCond = PostTextJsonData(e,qun_id,Json);
       if (PostCond==true) {
         let Msg = GetYamlArrayRandomValue(e,"daoguanzi","win_language",qun_id);
