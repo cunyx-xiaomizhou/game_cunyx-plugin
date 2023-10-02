@@ -1,6 +1,7 @@
 import fs from 'fs';
+import { GetYamlValue } from './GetYamlValue.js';
 export function PostTextJsonData (e,qun_id,TextJson) {
-  Bot.logger.mark("[寸幼萱淫趴][model/PostJsonData]开始更新数据文件...");
+  Bot.logger.mark("[寸幼萱淫趴][model/PostTextJsonData]开始更新数据文件...");
   if (GetYamlValue(e,"data","IsBind",qun_id)==true) {
     dir = "all";
   } else {
