@@ -43,9 +43,9 @@ export class CunyxImpart_daoguanzi extends plugin {
     let low = GetYamlValue(e,"daoguanzi","add_low",qun_id);
     let heigh = GetYamlValue(e,"daoguanzi","add_heigh",qun_id);
     let cd = GetYamlValue(e,"daoguanzi","cd",qun_id);
-    let Num = random(low,height);
+    let Num = random(low,heigh);
     //计算增长值
-    if (Num==height) {
+    if (Num==heigh) {
       Number = Num;
     } else {
       Number = Num + LooseNumber(random(0,999),3)/1000;
