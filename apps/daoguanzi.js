@@ -11,6 +11,7 @@ import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
 //定义全局变量
 let BeQQ;
 let Json;
+let st_cd;
 let qun_id;
 let Number;
 let RegRule = new RegExp("^#?("+GetYamlValue("e","daoguanzi","reg")+")$","g");
@@ -64,7 +65,11 @@ export class CunyxImpart_daoguanzi extends plugin {
     if (GetYamlValue(e,'daoguanzi','cond')==true) {
       start(e,"IsPublic",qun_id);
       let Json = JSON.parse(GetTextJsonData(e,qun_id));
-      let st_cd = Json[BeQQ]["cd"]["daoguanzi"];
+      try {
+        st_cd = Json[BeQQ]["cd"]["daoguanzi"];
+      } catch (err) {
+        st_cd = 0;
+      }
       if (time()<st_cd) {
         let Msg = GetYamlArrayRandomValue(e,"daoguanzi","cd_language",qun_id).replace(/{cd}/,st_cd - time());
         e.reply(Msg,true);
