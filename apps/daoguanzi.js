@@ -92,7 +92,7 @@ export class CunyxImpart_daoguanzi extends plugin {
         let Msg = GetYamlArrayRandomValue(e,"daoguanzi","win_language",qun_id);
         e.reply(Msg.replace(/{add}/,Number),true);
       } else {
-        e.reply(PostCond,true);
+        e.reply("【返回】"+PostCond,true);
       }
     } else {
       e.reply(GetYamlArrayRandomValue(e,"daoguanzi","close",qun_id),true);
