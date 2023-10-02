@@ -4,8 +4,11 @@ import { GetBindQun } from './../model/GetBindQun.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { LooseNumber } from './../model/LooseNumber.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
+import { GetTextJsonData } from './../model/GetTextJsonData.js';
 import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
+//定义全局变量
 let BeQQ;
+let Json;
 let qun_id;
 let Number;
 let RuleReg = GetYamlValue("e","daoguanzi","reg");
@@ -46,7 +49,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       Number = Num + LooseNumber(random(0,999),3)/1000;
     }
     //提取用户QQ号
-    let reg = new RegExp(GetYamlValue(RuleReg,"g");
+    let reg = new RegExp(GetYamlValue(RuleReg,"g"));
     let BeQQ = e.msg.replace(reg,"").trim();
     if (/^\d{5,10}$/.test(BeQQ)==false) {
       BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
@@ -58,17 +61,18 @@ export class CunyxImpart_daoguanzi extends plugin {
     }
     if (GetYamlValue(e,'daoguanzi','cond')==true) {
       start(e,"IsPublic",qun_id);
-      /**
-       * @这里打算写一个函数读取JSON数据
-       * @毕竟这个同步系统搞的我是心乱啊！
-       * @呜呜呜安慰安慰孩子发点电吧
-       */
-      //let OldJson = JSON.parse();
-      if (e.group_id) {
-        //群聊导管子
-      } else {
-        //私聊导管子
+      let Json = JSON.parse(GetTextJsonData(e,qun_id));
+      try {
+        Json[BeQQ]["data"]["long"] = Json[BeQQ]["data"]["long"] + Number;
+      } catch (err) {
+        Json[BeQQ]["data"]["long"] = Number;
       }
+      Json[BeQQ]["cd"]["daoguanzi"] = time() + (cd * 1000);
+      /**
+       * @这里写一个提交JSON的函数
+       * @好难啊，不想写插件
+       */
+      e.reply("代码状态正常，具体内容正在更新");
     } else {
       //淫趴被关闭
     }
