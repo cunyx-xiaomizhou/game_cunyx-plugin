@@ -17,6 +17,6 @@ export function GetTextJsonData (e,qun_id) {
     Bot.logger.error(err);
     e.reply("程序运行错误，错误已打印至控制台，请联系相关人员处理",true);
     Bot.logger.error("程序终止运行");
-    return flase;
+    return false;
   }
 }
