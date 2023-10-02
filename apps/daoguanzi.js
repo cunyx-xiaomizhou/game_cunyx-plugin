@@ -6,6 +6,7 @@ import plugin from './../../../lib/plugins/plugin.js';
 import { LooseNumber } from './../model/LooseNumber.js';
 import { GetYamlValue } from './../model/GetYamlValue.js';
 import { GetTextJsonData } from './../model/GetTextJsonData.js';
+import { PostTextJsonData } from './../model/PostTextJsonData.js';
 import { GetYamlArrayRandomValue } from './../model/GetYamlArrayRandomValue.js';
 //定义全局变量
 let BeQQ;
@@ -63,17 +64,22 @@ export class CunyxImpart_daoguanzi extends plugin {
     if (GetYamlValue(e,'daoguanzi','cond')==true) {
       start(e,"IsPublic",qun_id);
       let Json = JSON.parse(GetTextJsonData(e,qun_id));
+      let st_cd = Json[BeQQ]["cd"]["daoguanzi"];
+      if (time()<st_cd) {
+        let Msg = GetYamlArrayRandomValue(e,"daoguanzi","cd_language",qun_id).replace(/{cd}/,st_cd - time());
+        e.reply(Msg,true);
+      }
       try {
         Json[BeQQ]["data"]["long"] = Json[BeQQ]["data"]["long"] + Number;
       } catch (err) {
         Json[BeQQ]["data"]["long"] = Number;
       }
       Json[BeQQ]["cd"]["daoguanzi"] = time() + (cd * 1000);
-      /**
-       * @这里写一个提交JSON的函数
-       * @好难啊，不想写插件
-       */
-      e.reply("代码状态正常，具体内容正在更新");
+      let PostCond = PostTextJsonData(e,qun_id,Json);
+      if (PostCond==true) {
+        let Msg = GetYamlArrayRandomValue(e,"daoguanzi","win_language",qun_id);
+        e.reply(Msg.replace(/{add}/,Number),true);
+      }
     } else {
       e.reply(GetYamlArrayRandomValue(e,"daoguanzi","close"),true);
       return false;
