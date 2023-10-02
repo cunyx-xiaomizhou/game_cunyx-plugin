@@ -70,8 +70,8 @@ export class CunyxImpart_daoguanzi extends plugin {
       } catch (err) {
         st_cd = 0;
       }
-      if (time()<st_cd) {
-        let Msg = GetYamlArrayRandomValue(e,"daoguanzi","cd_language",qun_id).replace(/{cd}/,st_cd - time());
+      if (Data.now()<st_cd) {
+        let Msg = GetYamlArrayRandomValue(e,"daoguanzi","cd_language",qun_id).replace(/{cd}/,(st_cd - Data.now())/1000);
         e.reply(Msg,true);
       }
       try {
@@ -79,7 +79,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       } catch (err) {
         Json[BeQQ]["data"]["long"] = Number;
       }
-      Json[BeQQ]["cd"]["daoguanzi"] = time() + (cd * 1000);
+      Json[BeQQ]["cd"]["daoguanzi"] = Data.now() + (cd * 1000);
       let PostCond = PostTextJsonData(e,qun_id,Json);
       if (PostCond==true) {
         let Msg = GetYamlArrayRandomValue(e,"daoguanzi","win_language",qun_id);
