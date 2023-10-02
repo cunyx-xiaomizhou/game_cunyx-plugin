@@ -20,7 +20,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:RegRule,fnc:"dgz"}
+        {reg:RegRule,fnc:"daoguanzi"}
       ]
     });
   }
