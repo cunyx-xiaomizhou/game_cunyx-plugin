@@ -40,6 +40,7 @@ export class CunyxImpart_daoguanzi extends plugin {
     } else {
       qun_id = e.group_id;
     }
+    start(e,"IsPublic",qun_id);
     //获取控制面板需要的值
     let low = GetYamlValue(e,"daoguanzi","add_low",qun_id);
     let heigh = GetYamlValue(e,"daoguanzi","add_hight",qun_id);
@@ -62,7 +63,6 @@ export class CunyxImpart_daoguanzi extends plugin {
       BeQQ = BeQQ;
     }
     if (GetYamlValue(e,'daoguanzi','cond')==true) {
-      start(e,"IsPublic",qun_id);
       let Json = JSON.parse(GetTextJsonData(e,qun_id));
       try {
         st_cd = Json[BeQQ]["cd"]["daoguanzi"];
