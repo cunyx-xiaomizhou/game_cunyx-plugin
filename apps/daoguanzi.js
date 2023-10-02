@@ -28,7 +28,6 @@ export class CunyxImpart_daoguanzi extends plugin {
     });
   }
   async daoguanzi (e) {
-    e.reply("阿巴巴巴",true);
     if (!e.group_id) {
       let qun_id = GetBindQun(e);
       if (qun_id==null) {
@@ -73,6 +72,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       if (Date.now()<st_cd) {
         let Msg = GetYamlArrayRandomValue(e,"daoguanzi","cd_language",qun_id).replace(/{cd}/,(st_cd - Date.now())/1000);
         e.reply(Msg,true);
+        return false;
       }
       try {
         Json[BeQQ]["data"]["long"] = Json[BeQQ]["data"]["long"] + Number;
