@@ -27,7 +27,6 @@ export function GetYamlValue (e,FileName,Name,qun_id) {
       try {
         Bot.logger.mark("默认值读取失败，正在使用常规读取方式...");
         let value = data[Name];
-        if (value==undefined) throw undefined;
         Bot.logger.info("读取成功，返回"+value);
         return value;
       } catch (err) {
