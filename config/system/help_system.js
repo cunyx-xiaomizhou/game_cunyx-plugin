@@ -26,7 +26,13 @@ export const helpCfg = {
 }
 
 export const helpList = [{
-  group: '用户系统命令',
+  group: '* 控制面板路径为'+process.cwd()+'/plugins/impart_cunyx-plugin/config',
+  auth: 'master',
+  list: [{}],
+  group: '* 请不要修改def_config文件夹下的内容，否则更新会报错',
+  auth: 'master',
+  list: [{}],
+  group: '系统指令',
   list: [{
     icon: 1,
     title: '#淫趴绑定[本群|群号]' ,
@@ -36,22 +42,22 @@ export const helpList = [{
   list: [{
     icon: 3,
     title: '#导管子',
-    desc: '开发中'
+    desc: '运动运动，强身健体~~'
   }]},{
   group: '管理员可用功能',
   auth: 'master',
   list: [{
     icon: 85,
-    title: '#开启/关闭淫趴',
-    desc: '更改指定群聊淫趴状态'
+    title: '#查看控制文件',
+    desc: '查看可以重新拉取的控制文件'
   }, {
     icon: 32,
     title: '#寸幼萱淫趴更新',
     desc: '更新淫趴插件，获取新功能'
   }, {
     icon: 35,
-    title: '#寸幼萱淫趴数据迁移',
-    desc: '将寸幼萱插件内的数据迁移至淫趴插件<br/>请不要多次使用'
+    title: '#重载控制文件[文件名]',
+    desc: '重新拉取文件以获得新文案'
   }]
 }];
 
