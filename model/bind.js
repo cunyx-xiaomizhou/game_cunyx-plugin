@@ -4,13 +4,18 @@ import { GetYamlValue } from './GetYamlValue.js';
 import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
 let dir;
 export function bind (e,qq_id,qun_id) {
+  let JsonText;
   if (GetYamlValue(e,"data","IsBind")==true) {
     dir = "all";
   } else {
     dir = Bot.uin;
   }
   try {
-    let JsonText = fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json');
+    if (fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json')) {
+      JsonText = fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json');
+    } else {
+      JsonText = {};
+    }
     let Json = JSON.parse(JsonText);
     Json[qq_id] = qun_id;
     let NewJson = JSON.stringify(Json);
@@ -21,6 +26,7 @@ export function bind (e,qq_id,qun_id) {
       e.reply(msg,true);
     });
   } catch (err) {
-    start(e,"IsBind","bind");
+    Bot.logger.error(err);
+    Bot.logger.error("程序终止运行");
   }
 }
