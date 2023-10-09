@@ -10,12 +10,11 @@ export function start (e,IsData,FileName) {
     } else {
       dir = Bot.uin;
     }
-    try {
-      fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+".json");
+    if (fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+".json")) {
       let Msg = GetYamlArrayRandomValue(e,"system","start_already");
       Bot.logger.info("[寸幼萱淫趴][model/start]"+Msg);
       return true;
-    } catch (err) {
+    } else {
       fs.writeFile('./plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+'.json',JSON.stringify({}),(err) => {
         if (err) throw err;
         let Msg = GetYamlArrayRandomValue(e,"system","start").replace(/{_path_}/,"data/"+dir+"/"+FileName+".json");
