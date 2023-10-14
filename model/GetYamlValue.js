@@ -13,7 +13,7 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
       if (Array.isArray(value)) {
         Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
         return value;
-      } else if (typeof value === 'string') {
+      } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
         let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("读取群配置成功，返回"+Value);
         return Value;
@@ -26,7 +26,7 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
     if (Array.isArray(value)) {
       Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
       return value;
-    } else if (typeof value === 'string') {
+    } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
       let Value = value.replace(/{or}/g,"|");
       Bot.logger.info("读取群配置成功，返回"+Value);
       return Value;
@@ -40,7 +40,7 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
       if (Array.isArray(value)) {
         Bot.logger.info("默认值读取成功，返回"+JSON.stringify(value));
         return value;
-      } else if (typeof value === 'string') {
+      } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
         let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("默认值读取成功，返回"+Value);
         return Value;
@@ -54,7 +54,7 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
         if (Array.isArray(value)) {
           Bot.logger.info("读取成功，返回"+JSON.stringify(value));
           return value;
-        } else if (typeof value === 'string') {
+        } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
           let Value = value.replace(/{or}/g,"|");
           Bot.logger.info("读取成功，返回"+Value);
           return Value;
