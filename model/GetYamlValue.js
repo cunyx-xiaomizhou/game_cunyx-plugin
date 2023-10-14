@@ -9,26 +9,30 @@ export function GetYamlValue (e,FileName,Name,qun_id) {
     if (qun_id) {
       let value = data[qun_id][Name];
       if (value==undefined) throw undefined;
-      Bot.logger.info("读取群配置成功，返回"+value);
-      return value;
+      let Value = value.replace(/{or}/,"|");
+      Bot.logger.info("读取群配置成功，返回"+Value);
+      return Value;
     }
     let value = data[e.group_id][Name];
     if (value==undefined) throw undefined;
-    Bot.logger.info("读取群配置成功，返回"+value);
-    return value;
+    let Value = value.replace(/{or}/,"|");
+    Bot.logger.info("读取群配置成功，返回"+Value);
+    return Value;
   } catch (err) {
     Bot.logger.mark("读取群配置失败，尝试读取默认配置");
     try {
       let value = data.def[Name];
       if (value==undefined) throw undefined;
-      Bot.logger.info("默认值读取成功，返回"+value);
-      return value;
+      let Value = value.replace(/{or}/,"|");
+      Bot.logger.info("默认值读取成功，返回"+Value);
+      return Value;
     } catch (err) {
       try {
         Bot.logger.mark("默认值读取失败，正在使用常规读取方式...");
         let value = data[Name];
-        Bot.logger.info("读取成功，返回"+value);
-        return value;
+        let Value = value.replace(/{or}/,"|");
+        Bot.logger.info("读取成功，返回"+Value);
+        return Value;
       } catch (err) {
         Bot.logger.error("读取失败！错误如下：");
         Bot.logger.error(err);
