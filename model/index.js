@@ -1,6 +1,6 @@
 /**
  * @最好喝的小米粥
- * By 2023-10-14 17:10
+ * By 2023-10-14 18:07
  * http://afdian.net/a/woxmz
  * 集合本文件夹下所有模型及函数
  */
@@ -20,7 +20,7 @@ export {
     GetDate,
     GetBindQun,
     LooseNumber,
-    GetyamlValue,
+    GetYamlValue,
     SendForwardMsg,
     GetTextJsonData,
     PostTextJsonData,
