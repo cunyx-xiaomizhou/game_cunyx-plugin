@@ -1,4 +1,7 @@
+import CIP from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
+//定义全局变量
+let qq;
 export class CunyxImpart_profile extends plugin {
   constructor () {
     super({
@@ -7,7 +10,7 @@ export class CunyxImpart_profile extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?$",fnc:"profile"}
+        {reg:"^#?profile$",fnc:"profile"}
       ]
     });
   }
