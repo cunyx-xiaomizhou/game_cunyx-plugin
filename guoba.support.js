@@ -1,6 +1,7 @@
 import path from 'path'
 import lodash from 'lodash'
-import {cfg, _paths} from "#guoba.platform";
+import setting from './config/utils/setting.js'
+import { pluginResources } from './config/utils/path.js'
 
 // 支持锅巴
 export function supportGuoba() {
