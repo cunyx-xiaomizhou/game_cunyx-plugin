@@ -9,13 +9,13 @@ export function GetYamlValue (e,FileName,Name,qun_id) {
     if (qun_id) {
       let value = data[qun_id][Name];
       if (value==undefined) throw undefined;
-      let Value = value.replace(/{or}/,"|");
+      let Value = value.replace(/{or}/g,"|");
       Bot.logger.info("读取群配置成功，返回"+Value);
       return Value;
     }
     let value = data[e.group_id][Name];
     if (value==undefined) throw undefined;
-    let Value = value.replace(/{or}/,"|");
+    let Value = value.replace(/{or}/g,"|");
     Bot.logger.info("读取群配置成功，返回"+Value);
     return Value;
   } catch (err) {
@@ -23,14 +23,14 @@ export function GetYamlValue (e,FileName,Name,qun_id) {
     try {
       let value = data.def[Name];
       if (value==undefined) throw undefined;
-      let Value = value.replace(/{or}/,"|");
+      let Value = value.replace(/{or}/g,"|");
       Bot.logger.info("默认值读取成功，返回"+Value);
       return Value;
     } catch (err) {
       try {
         Bot.logger.mark("默认值读取失败，正在使用常规读取方式...");
         let value = data[Name];
-        let Value = value.replace(/{or}/,"|");
+        let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("读取成功，返回"+Value);
         return Value;
       } catch (err) {
