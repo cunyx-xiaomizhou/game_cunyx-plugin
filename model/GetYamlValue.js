@@ -17,7 +17,9 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
         let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("读取群配置成功，返回"+Value);
         return Value;
-      }
+      } 
+    }
+  } catch (err) {
    try {
     let value = data[e.group_id][Name];
     if (Array.isArray(value)) {
