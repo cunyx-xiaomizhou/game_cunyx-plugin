@@ -1,6 +1,6 @@
 /**
  * @最好喝的小米粥
- * By 2023-10-14 16:
+ * By 2023-10-14 17:10
  * http://afdian.net/a/woxmz
  * 集合本文件夹下所有模型及函数
  */
@@ -10,6 +10,7 @@ import { GetDate } from './GetDate.js';
 import { GetBindQun } from './GetBindQun.js';
 import { LooseNumber } from './LooseNumber.js';
 import { GetYamlValue } from './GetyamlValue.js';
+import { SendForwardMsg } from './SendForwardMsg.js';
 import { GetTextJsonData } from './GetTextJsonData.js';
 import { PostTextJsonData } from './PostTextJsonData.js';
 import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
@@ -20,6 +21,7 @@ export {
     GetBindQun,
     LooseNumber,
     GetyamlValue,
+    SendForwardMsg,
     GetTextJsonData,
     PostTextJsonData,
     GetYamlArrayRandomValue
