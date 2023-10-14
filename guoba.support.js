@@ -9,14 +9,14 @@ export function supportGuoba() {
     // 如果你的插件没有在插件库里，那么需要填上补充信息
     // 如果存在的话，那么填不填就无所谓了，填了就以你的信息为准
     pluginInfo: {
-      name: 'guoba-plugin',
-      title: 'Guoba-Plugin',
-      author: '@zolay-poi',
-      authorLink: 'https://github.com/zolay-poi',
-      link: 'https://github.com/guoba-yunzai/guoba-plugin',
+      name: 'impart_cunyx-plugin',
+      title: '寸幼萱淫趴',
+      author: '@最好喝的小米粥',
+      authorLink: 'https://gitee.com/cunyx',
+      link: 'https://gitee.com/cunyx/impart_cunyx-plugin',
       isV3: true,
       isV2: false,
-      description: '主要提供后台管理界面',
+      description: "云崽功能最强的淫趴插件",
       // 显示图标，此为个性化配置
       // 图标可在 https://icon-sets.iconify.design 这里进行搜索
       icon: 'mdi:stove',
@@ -30,11 +30,15 @@ export function supportGuoba() {
       // 配置项 schemas
       schemas: [
         {
-          field: 'base.checkUpdate',
-          label: '检查更新',
-          helpMessage: '启动时和每天凌晨4点自动检查更新，并发送消息提醒（每个版本只提醒一次）',
-          bottomHelpMessage: '是否自动检查更新，并发送消息提醒',
-          component: 'Switch',
+          field: 'daoguanzi.reg',
+          label: '导管子正则',
+          helpMessage: '自定义“导管子”功能的正则表达式',
+          bottomHelpMessage: '设置触发指令，想怎么导，就怎么导~',
+          component: 'Input',
+          required: true,
+          componentProps: {
+            placeholder: '请输入正则(已经自带#?和$)'
+          },
         },
         // {
         //   field: 'base.city',
@@ -49,6 +53,7 @@ export function supportGuoba() {
         //     placeholder: '请输入天气城市',
         //   },
         // },
+        /*
         {
           field: 'server.host',
           label: '服务器地址',
@@ -94,6 +99,7 @@ export function supportGuoba() {
             placeholder: '请输入ICP备案号',
           },
         },
+        */
       ],
       // 获取配置数据方法（用于前端填充显示数据）
       getConfigData() {
