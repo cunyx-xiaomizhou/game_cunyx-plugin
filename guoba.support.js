@@ -30,6 +30,10 @@ export function supportGuoba() {
       // 配置项 schemas
       schemas: [
         {
+          component: 'Divider',
+          label: '“导管子相关配置'
+        },
+        {
           field: 'daoguanzi.reg',
           label: '导管子正则',
           helpMessage: '自定义“导管子”功能的正则表达式',
