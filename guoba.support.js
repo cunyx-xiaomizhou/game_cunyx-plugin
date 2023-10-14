@@ -107,32 +107,19 @@ export function supportGuoba() {
         */
       ],
       // 获取配置数据方法（用于前端填充显示数据）
-      getConfigData() {
-        let config = lodash.omit(cfg.merged, 'jwt')
-        let host = lodash.get(config, 'server.host')
-        if (Array.isArray(host)) {
-          lodash.set(config, 'server.host', host[0])
-        }
-        return config
+      getConfigData () {
+        return setting.merge()
       },
       // 设置配置的方法（前端点确定后调用的方法）
-      setConfigData(data, {Result}) {
+      setConfigData (data, { Result }) {
         let config = {}
         for (let [keyPath, value] of Object.entries(data)) {
-          // 特殊处理 server.host
-          if (keyPath === 'server.host') {
-            let host = cfg.get('server.host')
-            if (Array.isArray(host)) {
-              host[0] = value
-              value = host
-            }
-          }
           lodash.set(config, keyPath, value)
         }
-        config = lodash.merge({}, cfg.merged, config)
-        cfg.config.reader.setData(config)
+        config = lodash.merge({}, setting.merge, config)
+        setting.analysis(config)
         return Result.ok({}, '保存成功~')
-      },
-    },
+      }
+    }
   }
 }
