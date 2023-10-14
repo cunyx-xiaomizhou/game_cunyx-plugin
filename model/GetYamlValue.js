@@ -13,25 +13,20 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
       if (Array.isArray(value)) {
         Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
         return value;
-      } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
+      } else {
         let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("读取群配置成功，返回"+Value);
         return Value;
-      } else {
-        throw new Error("无效的配置值");
       }
-    }
-    
+   try {
     let value = data[e.group_id][Name];
     if (Array.isArray(value)) {
       Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
       return value;
-    } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
+    } else {
       let Value = value.replace(/{or}/g,"|");
       Bot.logger.info("读取群配置成功，返回"+Value);
       return Value;
-    } else {
-      throw new Error("无效的配置值");
     }
   } catch (err) {
     Bot.logger.mark("读取群配置失败，尝试读取默认配置");
@@ -40,12 +35,10 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
       if (Array.isArray(value)) {
         Bot.logger.info("默认值读取成功，返回"+JSON.stringify(value));
         return value;
-      } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
+      } else {
         let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("默认值读取成功，返回"+Value);
         return Value;
-      } else {
-        throw new Error("无效的配置值");
       }
     } catch (err) {
       try {
@@ -54,12 +47,10 @@ export function GetYamlValue(e, FileName, Name, qun_id) {
         if (Array.isArray(value)) {
           Bot.logger.info("读取成功，返回"+JSON.stringify(value));
           return value;
-        } else if (typeof value === 'string'||typeof value === 'boolean'||typeof value === 'number') {
+        } else {
           let Value = value.replace(/{or}/g,"|");
           Bot.logger.info("读取成功，返回"+Value);
           return Value;
-        } else {
-          throw new Error("无效的配置值");
         }
       } catch (err) {
         Bot.logger.error("读取失败！错误如下：");
