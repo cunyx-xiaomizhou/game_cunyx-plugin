@@ -41,7 +41,7 @@ export class CunyxImpart_MyProfile extends plugin {
     }
     //尝试获取淫趴数据
     try {
-      Json = JSON.parse(mod.GetTextJsonData(e,qun_if));
+      Json = JSON.parse(mod.GetTextJsonData(e,qun_id));
       e.reply("牛牛长度："+Json[BeQQ].data.long);
     } catch (err) {
       e.reply("err");
