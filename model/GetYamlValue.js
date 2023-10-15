@@ -12,7 +12,8 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
         Bot.logger.info("获取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
       }
-      let Value = value.replace(/{or}/g,"|");
+      let v = value;
+      let Value = v.replace(/{or}/g,"|");
       Bot.logger.info("获取成功，返回："+Value);
       return Value;
     } else {
@@ -21,7 +22,8 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
         Bot.logger.info("获取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
       }
-      let Value = value.replace(/{or}/g,"|");
+      let v = value;
+      let Value = v.replace(/{or}/g,"|");
       Bot.logger.info("读取成功，返回："+Value);
       return Value;
     }
@@ -33,8 +35,9 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
         Bot.logger.info("群单独配置读取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
       }
-      let Value = value.replace(/{or}/g,"|");
-      Bot.lohger.info("群单独配置读取成功，返回："+Value);
+      let v = value;
+      let Value = v.replace(/{or}/g,"|");
+      Bot.logger.info("群单独配置读取成功，返回："+Value);
       return Value;
     } catch (err) {
       Bot.logger.mark("群单独配置读取失败，正在直接读取....");
@@ -44,7 +47,8 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
           Bot.logger.info("直接读取成功，类型：数组；返回：\n"+JSON.stringify(value));
           return value;
         }
-        let Value = value.replace(/{or}/g,"|");
+        let v = value;
+        let Value = v.replace(/{or}/g,"|");
         Bot.logger.info("直接读取成功，返回："+Value);
         return Value;
       } catch (err) {
