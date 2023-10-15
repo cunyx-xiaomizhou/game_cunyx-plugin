@@ -30,7 +30,7 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
     try {
       let value = data.def[Name];
       if (Array.isArray(value)) {
-        Bot.logger.info("群单独配置读取成功，类型：数组；\n返回："+value);
+        Bot.logger.info("群单独配置读取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
       }
       let Value = value.replace(/{or}/g,"|");
@@ -41,80 +41,19 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
       try {
         let value = data[Name];
         if (Array.isArray(value)) {
-          Bot.logger.info("直接读取成功，类型：数组；返回：\n"+value);
+          Bot.logger.info("直接读取成功，类型：数组；返回：\n"+JSON.stringify(value));
           return value;
         }
-        let Value = value.replace(/{or}/,"|");
+        let Value = value.replace(/{or}/g,"|");
         Bot.logger.info("直接读取成功，返回："+Value);
         return Value;
       } catch (err) {
         Bot.logger.error("读取失败，报错如下：");
         Bot.logger.error(err);
         e.reply("程序在运行时出现错误，报错已打印至控制台");
-        Bot.logger.error("返回false，程序终止运行");
+        Bot.logger.error("返回false，程序终止运行",true);
         return false;
       }
     }
   }
 }
-/** 
-  try {
-    Bot.logger.mark("尝试读取群单独配置....");
-    if (qun_id) {
-      let value = data[qun_id][Name];
-      if (Array.isArray(value)) {
-        Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
-        return value;
-      } else {
-        let Value = value.replace(/{or}/g,"|");
-        Bot.logger.info("读取群配置成功，返回"+Value);
-        return Value;
-      } 
-    }
-  } catch (err) {
-    try {
-      let value = data[e.group_id][Name];
-      if (Array.isArray(value)) {
-        Bot.logger.info("读取群配置成功，返回"+JSON.stringify(value));
-        return value;
-      } else {
-        let Value = value.replace(/{or}/g,"|");
-        Bot.logger.info("读取群配置成功，返回"+Value);
-        return Value;
-      }
-    } catch (err) {
-      Bot.logger.mark("读取群配置失败，尝试读取默认配置");
-      try {
-        let value = data.def[Name];
-        if (Array.isArray(value)) {
-          Bot.logger.info("默认值读取成功，返回"+JSON.stringify(value));
-          return value;
-        } else {
-          let Value = value.replace(/{or}/g,"|");
-          Bot.logger.info("默认值读取成功，返回"+Value);
-          return Value;
-        }
-      } catch (err) {
-        try {
-          Bot.logger.mark("默认值读取失败，正在使用常规读取方式...");
-          let value = data[Name];
-          if (Array.isArray(value)) {
-            Bot.logger.info("读取成功，返回"+JSON.stringify(value));
-            return value;
-          } else {
-            let Value = value.replace(/{or}/g,"|");
-            Bot.logger.info("读取成功，返回"+Value);
-            return Value;
-          }
-        } catch (err) {
-          Bot.logger.error("读取失败！错误如下：");
-          Bot.logger.error(err);
-          e.reply("程序出错，报错已打印至控制台，请联系相关人员处理",true);
-          Bot.logger.error("返回false，程序终止运行");
-          return false;
-        }
-      }
-    }
-  }
-}
-*/
