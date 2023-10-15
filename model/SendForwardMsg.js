@@ -1,4 +1,4 @@
-export function sendMsg(e, msg) {
+export function SendForwardMsg(e, msg) {
   let data_msg = [];
   for (let i = 0; i < msg.length; i++) {
     if (msg[i].startsWith('http') || msg[i].startsWith('data:image')) {
