@@ -28,15 +28,17 @@ export const helpCfg = {
 export const helpList = [{
   group: '* 控制面板路径为'+process.cwd()+'/plugins/impart_cunyx-plugin/config',
   auth: 'master',
-  list: [{}],
   group: '* 请不要修改def_config文件夹下的内容，否则更新会报错',
   auth: 'master',
-  list: [{}],
   group: '系统指令',
   list: [{
     icon: 1,
     title: '#淫趴绑定[本群|群号]' ,
     desc: '绑定群聊，让你私聊也可以色色'
+  },{
+    icon: 5,
+    title: '#淫趴面板',
+    desc: '查看我的各种信息'
   }]},{
   group: '淫趴游戏功能',
   list: [{
