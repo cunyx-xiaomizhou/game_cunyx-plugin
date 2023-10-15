@@ -99,7 +99,7 @@ export class CunyxImpart_daoguanzi extends plugin {
         try {
           let test = Json[BeQQ]["data"]["date"][Day]["daoguanzi"]["times"];
         } catch (err) {
-          Json[BeQQ]["data"]["data"][Day]["daoguanzi"] = {};
+          Json[BeQQ]["data"]["date"][Day]["daoguanzi"] = {};
         }
         Json[BeQQ].data.date[Day].daoguanzi.times = 1;
       }
