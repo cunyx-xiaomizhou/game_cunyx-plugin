@@ -16,6 +16,18 @@ export class CunyxImpart_MyProfile extends plugin {
     });
   }
   async myprofile (e) {
-    e.reply("框架测试成功");
+     if (!e.group_id) {
+      let qun_id = mod.GetBindQun(e);
+      if (qun_id==null) {
+        let Msg = mod.GetYamlArrayRandomValue(e,'MyProfile','NotBind');
+        e.reply(Msg,true);
+        return false;
+      } else {
+        qun_id = qun_id;
+      }
+    } else {
+      qun_id = e.group_id;
+    }
+    start(e,"IsPublic",qun_id);
   }
 }
