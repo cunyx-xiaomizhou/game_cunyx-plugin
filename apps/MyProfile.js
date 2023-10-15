@@ -1,7 +1,7 @@
 import mod from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
 //定义全局变量
-let BeQQ;
+let Json;
 let qun_id;
 let RegRule = new RegExp("^#?("+mod.GetYamlValue("e","MyProfile","reg")+")$","g");
 export class CunyxImpart_MyProfile extends plugin {
@@ -39,6 +39,12 @@ export class CunyxImpart_MyProfile extends plugin {
     } else {
       BeQQ = BeQQ;
     }
-    
+    //尝试获取淫趴数据
+    try {
+      Json = JSON.parse(mod.GetTextJsonData(e,qun_if));
+      e.reply("牛牛长度："+Json[BeQQ].data.long);
+    } catch (err) {
+      e.reply("err");
+    }
   }
 }
