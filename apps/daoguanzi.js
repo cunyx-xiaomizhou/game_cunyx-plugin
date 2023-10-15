@@ -53,7 +53,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       Number = Num + LooseNumber(random(0,999),3)/1000;
     }
     //提取用户QQ号
-    let BeQQ = e.msg.replace(RegRule,"").trim();
+    let BeQQ = e.msg.replace(RegRule," ").trim();
     if (/^\d{5,10}$/.test(BeQQ)==false) {
       BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
       if (BeQQ=="") {
