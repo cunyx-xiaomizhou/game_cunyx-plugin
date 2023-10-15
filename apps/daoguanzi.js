@@ -1,6 +1,7 @@
  import fs from 'fs';
 import { start } from './../model/start.js';
 import { random } from './../model/random.js';
+import { GetDate } from './../model/GetDate.js';
 import { GetBindQun } from './../model/GetBindQun.js';
 import plugin from './../../../lib/plugins/plugin.js';
 import { LooseNumber } from './../model/LooseNumber.js';
@@ -80,6 +81,32 @@ export class CunyxImpart_daoguanzi extends plugin {
         Json[BeQQ] = {};
         Json[BeQQ]["data"] = {};
         Json[BeQQ]["data"]["long"] = Number;
+      }
+      let Day = GetDate("Y-m-d");
+      try {
+        Json[BeQQ]["data"]["date"][Day]["daoguanzi"]["times"] = Json[BeQQ]["data"]["date"][Day]["daoguanzi"]["times"] + 1;
+      } catch (err) {
+        try {
+         let test = Json[BeQQ]["data"]["date"][Day];
+        } catch (err) {
+          Json[BeQQ]["data"]["date"] = {};
+        }
+        try {
+         let test = Json[BeQQ]["data"]["date"][Day]["daoguanzi"];
+        } catch (err) {
+          Json[BeQQ]["data"]["date"][Day] = {};
+        }
+        try {
+          let test = Json[BeQQ]["data"]["date"][Day]["daoguanzi"]["times"];
+        } catch (err) {
+          Json[BeQQ]["data"]["data"][Day]["daoguanzi"] = {};
+        }
+        Json[BeQQ].data.date[Day].daoguanzi.times = 1;
+      }
+      try {
+        Json[BeQQ].data.date[Day].daoguanzi.add = Json[BeQQ].data.date[Day].daoguanzi.add + Number;
+      } catch (err) {
+        Json[BeQQ].data.date[Day].daoguanzi.add = Number;
       }
       try {
         Json[BeQQ]["cd"]["daoguanzi"] = Date.now() + (cd * 1000);
