@@ -1,8 +1,9 @@
-import CIP from './../model/index.js';
+import CI_P from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
 //定义全局变量
 let qq;
-export class CunyxImpart_MyMsg extends plugin {
+let RegRule = new RegExp("^#?("+CI_P.GetYamlValue("e","system","reg")+")$","g");
+export class CunyxImpart_MyProfile extends plugin {
   constructor () {
     super({
       name:"寸幼萱淫趴:我的信息",
@@ -10,11 +11,11 @@ export class CunyxImpart_MyMsg extends plugin {
       event:"message",
       priority:1,/*优先级*/
       rule:[
-        {reg:"^#?淫趴信息$",fnc:"msg"}
+        {reg:RegRule,fnc:"myprofile"}
       ]
     });
   }
-  async msg (e) {
-    e.reply("相应")
+  async myprofile (e) {
+    e.reply("框架测试成功");
   }
 }
