@@ -1,7 +1,8 @@
 import mod from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
 //定义全局变量
-let qq;
+let BeQQ;
+let qun_id;
 let RegRule = new RegExp("^#?("+mod.GetYamlValue("e","MyProfile","reg")+")$","g");
 export class CunyxImpart_MyProfile extends plugin {
   constructor () {
@@ -29,5 +30,15 @@ export class CunyxImpart_MyProfile extends plugin {
       qun_id = e.group_id;
     }
     start(e,"IsPublic",qun_id);
+    let BeQQ = e.msg.replace(RegRule," ").trim();
+    if (/^\d{5,10}$/.test(BeQQ)==false) {
+      BeQQ = e.message.filter(item => item.type == 'at')?.map(item => item?.qq);
+      if (BeQQ=="") {
+        BeQQ = e.user_id;
+      }
+    } else {
+      BeQQ = BeQQ;
+    }
+    
   }
 }
