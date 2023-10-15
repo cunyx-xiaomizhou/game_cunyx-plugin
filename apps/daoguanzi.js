@@ -106,7 +106,7 @@ export class CunyxImpart_daoguanzi extends plugin {
       try {
         Json[BeQQ].data.date[Day].daoguanzi.add = Json[BeQQ].data.date[Day].daoguanzi.add + Number;
       } catch (err) {
-        Json[BeQQ].data.date[Day].daoguanzi.add = Number;
+        Json[BeQQ].data.date[Day].daoguanzi.add = Json[BeQQ].data.long;
       }
       try {
         Json[BeQQ]["cd"]["daoguanzi"] = Date.now() + (cd * 1000);
