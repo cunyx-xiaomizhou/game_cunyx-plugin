@@ -1,4 +1,4 @@
-import CI_P from './../model/index.js';
+import CIP from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
 //定义全局变量
 let qq;
