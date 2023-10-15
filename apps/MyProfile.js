@@ -1,8 +1,8 @@
-import CIP from './../model/index.js';
+import mod from './../model/index.js';
 import plugin from './../../../lib/plugins/plugin.js';
 //定义全局变量
 let qq;
-let RegRule = new RegExp("^#?("+CI_P.GetYamlValue("e","system","reg")+")$","g");
+let RegRule = new RegExp("^#?("+mod.GetYamlValue("e","system","reg")+")$","g");
 export class CunyxImpart_MyProfile extends plugin {
   constructor () {
     super({
