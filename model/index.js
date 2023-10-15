@@ -1,6 +1,6 @@
 /**
  * @最好喝的小米粥
- * By 2023-10-15 11:44
+ * By 2023-10-15 14:36
  * http://afdian.net/a/woxmz
  * 集合本文件夹下所有模型及函数
  */
@@ -14,7 +14,7 @@ import { SendForwardMsg } from './SendForwardMsg.js';
 import { GetTextJsonData } from './GetTextJsonData.js';
 import { PostTextJsonData } from './PostTextJsonData.js';
 import { GetYamlArrayRandomValue } from './GetYamlArrayRandomValue.js';
-export { 
+const CIP =  { 
     start, 
     random, 
     GetDate,
@@ -26,3 +26,4 @@ export {
     PostTextJsonData,
     GetYamlArrayRandomValue
 };
+export default CIP;
