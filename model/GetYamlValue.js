@@ -8,6 +8,7 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
     Bot.logger.mark("正在读取群单独配置....");
     if (qun_id) {
       let value = data[qun_id][Name];
+      if (value==undefined) throw "未定义";
       if (Array.isArray(value)) {
         Bot.logger.info("获取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
@@ -20,6 +21,7 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
       return Value;
     } else {
       let value = data[e.user_id][Name];
+      if (value==undefined) throw "未定义";
       if (Array.isArray(value)) {
         Bot.logger.info("获取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
@@ -34,7 +36,8 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
   } catch (err) {
     Bot.logger.mark("群单独配置获取失败，正在读取默认配置...");
     try {
-      let value = data.def[Name];
+      let value = data["def"][Name];
+      if (value==undefined) throw "未定义";
       if (Array.isArray(value)) {
         Bot.logger.info("群单独配置读取成功，类型：数组；\n返回："+JSON.stringify(value));
         return value;
@@ -49,6 +52,7 @@ export function GetYamlValue (e, FileName, Name, qun_id) {
       Bot.logger.mark("群单独配置读取失败，正在直接读取....");
       try {
         let value = data[Name];
+        if (value==undefined) throw "寻找的键未定义";
         if (Array.isArray(value)) {
           Bot.logger.info("直接读取成功，类型：数组；返回：\n"+JSON.stringify(value));
           return value;
