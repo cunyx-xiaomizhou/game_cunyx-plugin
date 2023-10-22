@@ -34,8 +34,8 @@ export class Update_impart_cunyx_plugin extends plugin {
       let text = await fetch(`http://goubianjie.com/xmz/?PluginName=impart_cunyx-plugin&user=user&type=get`);
       text = await text.json();
       var new_ver = text;
-      if (text.cond !== 200) {
-        e.reply("检查更新接口调用时出现错误，错误信息为："+text.msg,true);
+      if (new_ver.cond !== 200) {
+        e.reply("检查更新接口调用时出现错误，错误信息为："+new_ver.msg,true);
         return false;
       }
       let msg = `寸幼萱淫趴当前版本【${data.version}】\n\n寸幼萱插件开放下载的最新版本为【${new_ver.msg.version}】\n详情见下述转发消息`;
