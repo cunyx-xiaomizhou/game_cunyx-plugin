@@ -14,7 +14,7 @@ export function bind (e,qq_id,qun_id) {
     if (fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json')) {
       JsonText = fs.readFileSync('./plugins/impart_cunyx-plugin/data/'+dir+'/bind.json');
     } else {
-      JsonText = {};
+      JsonText = "{}";
     }
     let Json = JSON.parse(JsonText);
     Json[qq_id] = qun_id;
