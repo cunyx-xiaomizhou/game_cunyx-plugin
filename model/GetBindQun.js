@@ -3,7 +3,7 @@ import { GetYamlValue } from './GetYamlValue.js';
 let dir;
 export function GetBindQun (e) {
   Bot.logger.mark("[寸幼萱淫趴][model/GetBindQun]正在请求绑定QQ号......");
-  if (GetYamlValue(e,"data","IsBind")==true) {
+  if (GetYamlValue(e,"data","IsBind")==false) {
     dir = Bot.uin;
     Bot.logger.mark("在局部数据查找中...");
   } else {
