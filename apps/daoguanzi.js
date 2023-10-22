@@ -29,7 +29,7 @@ export class CunyxImpart_daoguanzi extends plugin {
     });
   }
   async daoguanzi (e) {
-    if (!e.group_id) {
+    if (!e.group_id || e.group_id!==undefined) {
       let qun_id = GetBindQun(e);
       if (qun_id==null) {
         let Msg = GetYamlArrayRandomValue(e,'daoguanzi','NotBind');
