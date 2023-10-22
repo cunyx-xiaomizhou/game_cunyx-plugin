@@ -40,7 +40,7 @@ export class Update_impart_cunyx_plugin extends plugin {
       }
       let msg = `寸幼萱淫趴当前版本【${data.version}】\n\n寸幼萱插件开放下载的最新版本为【${new_ver.msg.version}】\n详情见下述转发消息`;
       e.reply(msg);
-      let arr = [`寸幼萱插件【${new_ver.msg.version}】版本说明`,`主要更新：\n\n${new_ver.msg.msg}`,`更新方法：\n\n${new_ver.msg.update}`];
+      let arr = [`寸幼萱插件【${new_ver.msg.version}】版本说明`,`主要更新：\n\n${new_ver.msg.msg}`,`更新方法：\n\n${new_ver.msg.way}`];
       sendMsg (e,arr);
     } catch (err) {
       e.reply("检查更新api调用失败，请加群询问786034611");
