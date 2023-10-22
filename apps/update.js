@@ -34,7 +34,7 @@ export class Update_impart_cunyx_plugin extends plugin {
       let text = await fetch(`http://goubianjie.com/xmz/?PluginName=impart_cunyx-plugin&user=user&type=get`);
       text = await text.json();
       var new_ver = text;
-      if (new_ver.cond !== 200) {
+      if (new_ver.code !== 200) {
         e.reply("检查更新接口调用时出现错误，错误信息为："+new_ver.msg,true);
         return false;
       }
