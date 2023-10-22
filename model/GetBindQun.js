@@ -17,7 +17,7 @@ export function GetBindQun (e) {
     Bot.logger.info("查询成功，返回"+qun);
     return qun;
   } catch (err) {
-    Bot.logger.error("查找失败，返回null");
+    Bot.logger.error("查找失败，返回null\n"+Br);
     return null;
   }
 }
