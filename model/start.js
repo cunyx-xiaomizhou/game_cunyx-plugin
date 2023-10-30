@@ -10,8 +10,8 @@ export function start (e,IsData,FileName) {
     } else {
       dir = Bot.uin;
     }
-    try {
     let filePath = './plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+'.json';
+    try {
     if (!fs.existsSync(filePath)) {
       let content = {};
       fs.writeFileSync(filePath, JSON.stringify(content));
