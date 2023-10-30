@@ -42,7 +42,6 @@ export class CunyxImpart_daoguanzi extends plugin {
       qun_id = e.group_id;
     }
     e.group_id = qun_id;
-    e.reply("获取到的群id为"+qun_id);
     start(e,"IsPublic",qun_id);
     //获取控制面板需要的值
     let low = GetYamlValue(e,"daoguanzi","add_low",qun_id);
