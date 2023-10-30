@@ -10,6 +10,7 @@ export function start (e,IsData,FileName) {
     } else {
       dir = Bot.uin;
     }
+    try {
     let filePath = './plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+'.json';
     if (!fs.existsSync(filePath)) {
       let content = {};
@@ -21,6 +22,9 @@ export function start (e,IsData,FileName) {
       let Msg = GetYamlArrayRandomValue(e,"system","start_already");
       Bot.logger.info("[寸幼萱淫趴][model/start]"+Msg);
       return true;
+    }
+    } catch (err) {
+        fs.writeFileSync(filePath,JSON.stringify(content));
     }
     /**
     if (fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+".json")) {
