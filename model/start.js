@@ -12,8 +12,10 @@ export function start (e,IsData,FileName) {
     }
     let filePath = './plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+'.json';
     let content = {};
-    try {
     if (!fs.existsSync(filePath)) {
+      if (!fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/')) {
+        fs.mkdirSync('./plugins/impart_cunyx-plugin/data/'+dir+'/');
+      }
       fs.writeFileSync(filePath, JSON.stringify(content));
       let Msg = GetYamlArrayRandomValue(e,"system","start").replace(/{_path_}/,filePath);
       Bot.logger.info("[寸幼萱淫趴][model/start]"+Msg);
@@ -22,9 +24,6 @@ export function start (e,IsData,FileName) {
       let Msg = GetYamlArrayRandomValue(e,"system","start_already");
       Bot.logger.info("[寸幼萱淫趴][model/start]"+Msg);
       return true;
-    }
-    } catch (err) {
-        fs.writeFileSync(filePath,JSON.stringify(content));
     }
     /**
     if (fs.existsSync('./plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+".json")) {
