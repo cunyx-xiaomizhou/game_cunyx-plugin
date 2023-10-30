@@ -11,11 +11,11 @@ export function start (e,IsData,FileName) {
       dir = Bot.uin;
     }
     let filePath = './plugins/impart_cunyx-plugin/data/'+dir+'/'+FileName+'.json';
+    let content = {};
     try {
     if (!fs.existsSync(filePath)) {
-      let content = {};
       fs.writeFileSync(filePath, JSON.stringify(content));
-      let Msg = GetYamlArrayRandomValue(e,"system","start").replace(/{_path_}/,"data/"+dir+"/"+FileName+".json");
+      let Msg = GetYamlArrayRandomValue(e,"system","start").replace(/{_path_}/,filePath);
       Bot.logger.info("[寸幼萱淫趴][model/start]"+Msg);
       e.reply(Msg,true);
     } else {
