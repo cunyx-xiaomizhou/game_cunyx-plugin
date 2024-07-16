@@ -13,7 +13,7 @@
 
 - 使用Gitee
 ```bash
-git clone -b plugins --single-branch https://githee.com/cunyx/game_cunyx-plugin.git ./plugins/game_cunyx-plugin/plugins/
+git clone -b plugins --single-branch https://gitee.com/cunyx/game_cunyx-plugin.git ./plugins/game_cunyx-plugin/plugins/
 ```
 
 - 使用GitHub
